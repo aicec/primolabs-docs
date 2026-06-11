@@ -1,0 +1,380 @@
+/* ============================================
+   프리모스튜디오 메뉴얼 — 사용자 정의 스타일
+   ============================================ */
+
+/* Pretendard 한글 웹폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css");
+
+:root {
+  --md-text-font-family:
+    "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui,
+    sans-serif;
+  --md-code-font-family:
+    "JetBrains Mono", "D2Coding", "Menlo", "Consolas", monospace;
+}
+
+/* ============================================
+   타이포그래피 — 한글 가독성 강화
+   ============================================ */
+
+body,
+.md-typeset {
+  font-feature-settings: "ss01", "ss02", "kern";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.md-typeset {
+  font-size: 0.78rem;
+  line-height: 1.75;
+}
+
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-top: 3rem;
+  padding-top: 0.5rem;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 2rem;
+}
+
+.md-typeset h4 {
+  font-weight: 600;
+}
+
+/* 본문 paragraph 간격 */
+.md-typeset p {
+  margin-bottom: 0.9rem;
+  line-height: 1.75;
+}
+
+/* 강조 텍스트 */
+.md-typeset strong {
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+}
+
+/* ============================================
+   링크 — 부드러운 hover
+   ============================================ */
+
+.md-typeset a {
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition:
+    color 0.2s ease,
+    border-bottom-color 0.2s ease;
+}
+
+.md-typeset a:hover {
+  border-bottom-color: var(--md-accent-fg-color);
+}
+
+/* ============================================
+   Grid Cards — 강화된 시각 효과
+   ============================================ */
+
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > .card {
+  border-radius: 0.6rem;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: var(--md-accent-fg-color);
+}
+
+.md-typeset .grid.cards > ul > li > p:first-child,
+.md-typeset .grid.cards > .card > p:first-child {
+  margin-bottom: 0.4rem;
+}
+
+.md-typeset .grid.cards > ul > li > hr,
+.md-typeset .grid.cards > .card > hr {
+  margin: 0.6rem 0 0.8rem 0;
+  border: none;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset .grid.cards .twemoji.lg {
+  height: 1.75rem;
+  width: 1.75rem;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
+/* 화살표 링크 (오른쪽 화살표 아이콘) */
+.md-typeset .grid.cards a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 500;
+}
+
+/* Grid cards 안의 inline code 는 코드가 아니라 카드명 라벨 → 뱃지 스타일 */
+.md-typeset .grid.cards code {
+  font-family: var(--md-text-font-family);
+  font-size: 0.78em;
+  font-weight: 500;
+  background-color: var(--md-accent-fg-color--transparent);
+  color: var(--md-accent-fg-color);
+  border-radius: 0.5rem;
+  padding: 0.15rem 0.55rem;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards code {
+  background-color: rgba(99, 102, 241, 0.18);
+  color: #a5b4fc;
+}
+
+/* ============================================
+   Admonition — 더 시각적
+   ============================================ */
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 0.4rem;
+  border-width: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  border-left: 4px solid;
+}
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  font-weight: 600;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.md-typeset .admonition > :not(.admonition-title),
+.md-typeset details > :not(summary) {
+  font-size: 0.85rem;
+}
+
+/* ============================================
+   테이블 — 가독성 강화
+   ============================================ */
+
+.md-typeset table:not([class]) {
+  border-radius: 0.4rem;
+  overflow: hidden;
+  font-size: 0.78rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.md-typeset table:not([class]) th {
+  font-weight: 600;
+  background-color: var(--md-default-fg-color--lightest);
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background-color: var(--md-default-fg-color--lightest);
+}
+
+/* ============================================
+   코드 블록 — 더 부드럽게
+   ============================================ */
+
+.md-typeset code {
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+.md-typeset pre > code {
+  border-radius: 0.4rem;
+  padding: 1rem 1.2rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   네비게이션 — 더 명확한 활성 표시
+   ============================================ */
+
+.md-nav__link--active {
+  font-weight: 600;
+}
+
+.md-nav__item .md-nav__link--active {
+  color: var(--md-accent-fg-color);
+}
+
+.md-tabs__link--active {
+  font-weight: 600;
+}
+
+/* 사이드바 spacing */
+.md-nav__list {
+  padding-left: 0.4rem;
+}
+
+/* ============================================
+   인용 블록
+   ============================================ */
+
+.md-typeset blockquote {
+  border-left-width: 3px;
+  border-radius: 0 0.3rem 0.3rem 0;
+  padding: 0.4rem 1rem 0.4rem 1.2rem;
+  background-color: var(--md-default-fg-color--lightest);
+  font-style: normal;
+}
+
+/* ============================================
+   헤더 / 배너
+   ============================================ */
+
+.md-header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.md-header__title {
+  font-weight: 700;
+}
+
+/* ============================================
+   페이지 하단 next/prev 네비게이션
+   ============================================ */
+
+.md-footer__inner.md-grid {
+  padding: 1rem;
+}
+
+.md-footer__link {
+  border-radius: 0.4rem;
+  padding: 0.8rem 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.md-footer__link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ============================================
+   피드백 CTA — 기존 (개선)
+   ============================================ */
+
+.feedback-cta {
+  margin: 3rem 0 1rem 0;
+  padding: 1.6rem 1.5rem 1.85rem 1.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--md-default-fg-color--lightest) 0%,
+    var(--md-default-fg-color--lightest) 100%
+  );
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.6rem;
+  text-align: center;
+}
+
+.feedback-cta__title {
+  margin: 0 0 0.4rem 0;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+.feedback-cta__desc {
+  margin: 0 0 1.2rem 0;
+  font-size: 0.85em;
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+.feedback-cta__button {
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 0.4rem;
+  padding: 0.55rem 1.4rem;
+}
+
+/* ============================================
+   모바일 반응형 강화
+   ============================================ */
+
+@media screen and (max-width: 76.1875em) {
+  .md-typeset h1 {
+    font-size: 1.6rem;
+  }
+
+  .md-typeset h2 {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+  }
+
+  .md-typeset .grid.cards > ul > li,
+  .md-typeset .grid.cards > .card {
+    padding: 1rem 1.1rem;
+  }
+}
+
+/* ============================================
+   스크롤바 — 더 부드럽게 (webkit)
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--md-default-fg-color--lighter);
+  border-radius: 6px;
+  border: 2px solid var(--md-default-bg-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-default-fg-color--light);
+}
+
+/* ============================================
+   다크 모드 보정
+   ============================================ */
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: hsl(220, 15%, 13%);
+  --md-default-bg-color--light: hsl(220, 15%, 16%);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li,
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > .card {
+  background-color: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover,
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > .card:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+[data-md-color-scheme="slate"] .feedback-cta {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.08);
+}
