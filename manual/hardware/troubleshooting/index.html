@@ -1519,6 +1519,39 @@
 <p>자세한 내용은 <a href="../camera/#자주-발생하는-문제">카메라 연결 → 자주 발생하는 문제</a> 참조.</p>
 </details>
 <details class="failure">
+<summary>카메라 Wi-Fi 설정이 안 됨 (SSID·비밀번호 저장 실패)</summary>
+<p>카메라를 USB 로 연결한 뒤 Wi-Fi 정보를 저장하려는데 실패한다면, <strong>에러 메시지에 따라 원인이 다릅니다</strong>. 메시지가 바뀌면 다음 단계로 넘어간 것이니 진전입니다.</p>
+<table>
+<thead>
+<tr>
+<th>에러 메시지</th>
+<th>원인</th>
+<th>해결</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>응답 없음: WIFI_SET</strong></td>
+<td>USB 절전 모드가 포트를 잠재움 (액세스 거부)</td>
+<td>(Windows) 장치 관리자 → USB 허브 → <strong>선택적 절전 모드 끄기</strong>. USB 케이블 재연결 후 다시 시도</td>
+</tr>
+<tr>
+<td><strong>응답 시간 초과 (30초)</strong></td>
+<td>5GHz Wi-Fi 에 연결하려 함</td>
+<td>카메라는 <strong>2.4GHz 전용</strong>입니다. <strong>2.4GHz SSID</strong> 를 선택해 다시 저장</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">카메라는 2.4GHz Wi-Fi 만 됩니다</p>
+<p>현장 공유기가 5GHz 와 2.4GHz 를 <strong>같은 이름(SSID)</strong> 으로 쓰는 경우가 많습니다. 이때 카메라가 5GHz 에 붙으려다 실패합니다. 공유기 설정에서 <strong>2.4GHz 를 별도 이름</strong>으로 나누거나, 2.4GHz 전용 SSID 를 선택하세요.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">USB 직결로 먼저 사용 가능</p>
+<p>Wi-Fi 설정이 급하지 않다면, 카메라는 <strong>USB 직결만으로도 영상·AI 비전이 정상 동작</strong>합니다. Wi-Fi 는 카메라를 로봇 근처에 자유롭게 둘 때만 필요합니다.</p>
+</div>
+</details>
+<details class="failure">
 <summary>로봇 연결 실패</summary>
 <p>증상: "로봇 #1: 연결 실패" 에러</p>
 <table>
