@@ -1738,8 +1738,8 @@
 <h2 id="_5">연속 조그 (누르는 동안 이동)<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>수동 제어 패널의 관절 버튼(J1~J5)은 <strong>누르고 있는 동안 움직이고, 손을 떼면 즉시 멈춥니다</strong>.</p>
 <pre class="mermaid"><code>sequenceDiagram
-  참여자 사용자
-  참여자 로봇
+  participant 사용자
+  participant 로봇
   사용자-&gt;&gt;로봇: 버튼 누름
   로봇--&gt;&gt;로봇: 계속 이동
   사용자-&gt;&gt;로봇: 손 뗌
