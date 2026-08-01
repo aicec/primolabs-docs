@@ -1724,6 +1724,8 @@
 
 <h2 id="_4">그리퍼 제어 (열림 정도 조절)<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>SO-101 그리퍼는 서보라서 <strong>얼마나 열지(0~100%)</strong> 를 정할 수 있습니다.</p>
+<pre class="mermaid"><code>flowchart LR
+  A["열림 정도 설정 (슬라이더 0~100%)"] --&gt; B["N% 열기 버튼 누름"] --&gt; C["그만큼 열림"]</code></pre>
 <ul>
 <li><strong>[장비]</strong> 탭 그리퍼 섹션의 <strong>"열기 정도" 슬라이더</strong>로 원하는 % 를 먼저 설정합니다.</li>
 <li><strong>[N% 열기]</strong> 버튼을 누르면 그만큼 열립니다. <strong>[닫기]</strong>, <strong>[정지]</strong> 도 있습니다.</li>
@@ -1750,6 +1752,8 @@
 </div>
 <h2 id="_6">로봇 활성화 (비상정지 후 다시 쓰기)<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>물리 <strong>비상정지(E-STOP)</strong> 버튼을 눌렀다 뗀 뒤에는 로봇이 멈춤 상태로 남습니다. 이때 수동 제어 패널의 <strong>[로봇 활성화]</strong> 버튼을 누르면(오류가 있으면 빨간색으로 안내됩니다) 오류를 지우고 모터를 다시 켜 <strong>바로 사용할 수 있습니다</strong>. (이 버튼은 움직이지 않고 준비만 시킵니다.)</p>
+<pre class="mermaid"><code>flowchart LR
+  A[E-STOP 눌림] --&gt; B[E-STOP 물리 해제] --&gt; C[로봇 활성화 클릭] --&gt; D[다시 사용 준비]</code></pre>
 <h2 id="_7">안전<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
 <li>캘리브레이션 전에는 이동이 거부됩니다(안전장치).</li>
