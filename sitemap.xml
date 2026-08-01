@@ -2,102 +2,106 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.primolabs.kr/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/factoblock/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/factoblock/ai-cards/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/factoblock/basic-cards/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/factoblock/conveyor-cards/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/factoblock/events/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/factoblock/example-first-program/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/factoblock/gpio-cards/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/factoblock/mqtt-cards/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/factoblock/parallel/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/factoblock/robot-cards/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/factoblock/sensor-cards/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/factoblock/subroutines/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/factoblock/variables-conditions-loops/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/factoblock/view-st-code/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/getting-started/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/getting-started/first-launch/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/getting-started/installation/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/getting-started/kit-selection/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/hardware/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/hardware/camera/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/hardware/mainboard/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/hardware/robot-lite6/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.primolabs.kr/manual/hardware/robot-so101/</loc>
+         <lastmod>2026-08-01</lastmod>
     </url>
     <url>
          <loc>https://docs.primolabs.kr/manual/hardware/troubleshooting/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-01</lastmod>
     </url>
 </urlset>
