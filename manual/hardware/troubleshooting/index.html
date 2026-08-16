@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.primolabs.kr/manual/hardware/troubleshooting/">
       
       
-        <link rel="prev" href="../robot-so101/">
+        <link rel="prev" href="../mqtt-network/">
       
       
         <link rel="next" href="../../factoblock/">
@@ -342,6 +342,8 @@
       
         
       
+        
+      
     
     
     
@@ -594,6 +596,8 @@
       
         
       
+        
+      
     
     
     
@@ -665,7 +669,7 @@
   <span class="md-ellipsis">
     
   
-    메인보드 연결
+    컨베이어 연결
   
 
     
@@ -750,6 +754,34 @@
     
   
     SO-101 로봇팔 연결
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mqtt-network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MQTT 연결 문제
   
 
     
@@ -890,6 +922,8 @@
       
         
           
+        
+      
         
       
         
@@ -1320,6 +1354,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../factoblock/flow-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    순서도로 보기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../factoblock/view-st-code/" class="md-nav__link">
         
   
@@ -1328,6 +1390,146 @@
     
   
     ST 코드 보기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../advanced/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI · 노드
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI · 노드
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/imitation-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    손으로 가르치기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/node-canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    노드 캔버스
   
 
     
@@ -1438,7 +1640,7 @@
 <h2 id="_2">무엇을 다루나요?<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>연결이 안 되거나 동작이 이상할 때 가장 먼저 시도해 볼 항목들입니다. 각 문제별 단계를 따라가도 해결되지 않으면 페이지 하단 <strong>📮 피드백 보내기</strong> 로 알려주세요.</p>
 <details class="failure">
-<summary>메인보드 / 카메라 USB 인식 안 됨</summary>
+<summary>컨베이어 / 카메라 USB 인식 안 됨</summary>
 <p>증상: [장비] 탭의 포트 드롭다운에 USB 가 보이지 않음</p>
 <table>
 <thead>
@@ -1454,7 +1656,7 @@
 </tr>
 <tr>
 <td>2</td>
-<td>메인보드/카메라의 전원이 켜져 있는지 확인</td>
+<td>컨베이어/카메라의 전원이 켜져 있는지 확인</td>
 </tr>
 <tr>
 <td>3</td>
@@ -1480,7 +1682,7 @@
 </table>
 </details>
 <details class="warning">
-<summary>메인보드 또는 카메라 연결 직후 끊김</summary>
+<summary>컨베이어 또는 카메라 연결 직후 끊김</summary>
 <p>증상: "● 연결됨" → 잠시 후 "● 미연결" 또는 "● 응답 없음"</p>
 <ul>
 <li>USB 케이블의 접촉 불량 또는 케이블 자체 문제일 가능성 높음</li>
@@ -1608,11 +1810,11 @@
 <tbody>
 <tr>
 <td>1</td>
-<td>[장비] 탭의 메인보드 상태가 "● 연결됨" 인지 확인</td>
+<td>[장비] 탭의 컨베이어 상태가 "● 연결됨" 인지 확인</td>
 </tr>
 <tr>
 <td>2</td>
-<td>메인보드 전용 어댑터가 콘센트에 정상 연결됐는지 확인</td>
+<td>컨베이어 전용 어댑터가 콘센트에 정상 연결됐는지 확인</td>
 </tr>
 <tr>
 <td>3</td>
@@ -1638,7 +1840,7 @@
 <tbody>
 <tr>
 <td>1</td>
-<td>메인보드 연결 상태 확인 (위와 동일)</td>
+<td>컨베이어 연결 상태 확인 (위와 동일)</td>
 </tr>
 <tr>
 <td>2</td>
@@ -1676,7 +1878,7 @@
 </tr>
 <tr>
 <td>3</td>
-<td>메인보드/카메라 전원 재인가 후 다시 시도</td>
+<td>컨베이어/카메라 전원 재인가 후 다시 시도</td>
 </tr>
 <tr>
 <td>4</td>
@@ -1687,8 +1889,8 @@
 </details>
 <details class="warning">
 <summary>USB 케이블 매핑 오류 경고</summary>
-<p>증상: 펌웨어 업데이트 시 "메인보드 슬롯에 다른 장비가 연결되어 있습니다" 같은 경고</p>
-<p>메인보드와 카메라의 USB 케이블이 바뀌어 연결됐을 가능성. 두 케이블의 연결 위치를 확인하고, 올바른 장비에 연결된 상태에서 다시 시도하세요.</p>
+<p>증상: 펌웨어 업데이트 시 "컨베이어 슬롯에 다른 장비가 연결되어 있습니다" 같은 경고</p>
+<p>컨베이어와 카메라의 USB 케이블이 바뀌어 연결됐을 가능성. 두 케이블의 연결 위치를 확인하고, 올바른 장비에 연결된 상태에서 다시 시도하세요.</p>
 <div class="admonition info">
 <p class="admonition-title">안전 차단</p>
 <p>잘못된 장비에 펌웨어가 쓰여지지 않도록 <strong>자동 차단</strong>되는 정상 동작입니다. 장비 손상 방지를 위한 안전 장치입니다.</p>
@@ -1698,8 +1900,8 @@
 <p>위 항목으로 해결되지 않으면 다음 순서로 전체 재시작:</p>
 <ol>
 <li><strong>앱 완전 종료</strong> (작업 표시줄에서 우클릭 → 종료)</li>
-<li><strong>모든 USB 케이블 분리</strong> (메인보드, 카메라)</li>
-<li><strong>모든 전원 어댑터 분리</strong> (메인보드, 로봇)</li>
+<li><strong>모든 USB 케이블 분리</strong> (컨베이어, 카메라)</li>
+<li><strong>모든 전원 어댑터 분리</strong> (컨베이어, 로봇)</li>
 <li><strong>5초 대기</strong></li>
 <li><strong>전원 어댑터 재연결</strong> → <strong>USB 케이블 재연결</strong></li>
 <li><strong>앱 재실행</strong></li>
@@ -1779,7 +1981,7 @@
       <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
         
           
-          <a href="../robot-so101/" class="md-footer__link md-footer__link--prev" aria-label="이전: SO-101 로봇팔 연결">
+          <a href="../mqtt-network/" class="md-footer__link md-footer__link--prev" aria-label="이전: MQTT 연결 문제">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1789,7 +1991,7 @@
                 이전
               </span>
               <div class="md-ellipsis">
-                SO-101 로봇팔 연결
+                MQTT 연결 문제
               </div>
             </div>
           </a>

@@ -12,31 +12,31 @@
         <meta name="author" content="인공지능융합교육원 주식회사">
       
       
-        <link rel="canonical" href="https://docs.primolabs.kr/manual/getting-started/">
+        <link rel="canonical" href="https://docs.primolabs.kr/manual/hardware/mqtt-network/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../robot-so101/">
       
       
-        <link rel="next" href="installation/">
+        <link rel="next" href="../troubleshooting/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>시작하기 - 프리모스튜디오</title>
+        <title>MQTT 연결 문제 - 프리모스튜디오</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/extra.css">
+      <link rel="stylesheet" href="../../../assets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#mqtt" class="md-skip">
           콘텐츠로 이동
         </a>
       
@@ -98,7 +98,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="상단/헤더">
-    <a href="../.." title="프리모스튜디오" class="md-header__button md-logo" aria-label="프리모스튜디오" data-md-component="logo">
+    <a href="../../.." title="프리모스튜디오" class="md-header__button md-logo" aria-label="프리모스튜디오" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              시작하기
+              MQTT 연결 문제
             
           </span>
         </div>
@@ -218,7 +218,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -241,7 +241,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -283,7 +283,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="프리모스튜디오" class="md-nav__button md-logo" aria-label="프리모스튜디오" data-md-component="logo">
+    <a href="../../.." title="프리모스튜디오" class="md-nav__button md-logo" aria-label="프리모스튜디오" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -301,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -364,7 +364,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -405,8 +405,6 @@
                 
   
   
-    
-  
   
   
     
@@ -434,15 +432,17 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../getting-started/" class="md-nav__link ">
               
   
   
@@ -460,13 +460,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -486,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="installation/" class="md-nav__link">
+      <a href="../../getting-started/installation/" class="md-nav__link">
         
   
   
@@ -514,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="first-launch/" class="md-nav__link">
+      <a href="../../getting-started/first-launch/" class="md-nav__link">
         
   
   
@@ -542,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kit-selection/" class="md-nav__link">
+      <a href="../../getting-started/kit-selection/" class="md-nav__link">
         
   
   
@@ -575,8 +575,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -608,17 +610,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../hardware/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -642,7 +642,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -662,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hardware/mainboard/" class="md-nav__link">
+      <a href="../mainboard/" class="md-nav__link">
         
   
   
@@ -690,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hardware/camera/" class="md-nav__link">
+      <a href="../camera/" class="md-nav__link">
         
   
   
@@ -718,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hardware/robot-lite6/" class="md-nav__link">
+      <a href="../robot-lite6/" class="md-nav__link">
         
   
   
@@ -746,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hardware/robot-so101/" class="md-nav__link">
+      <a href="../robot-so101/" class="md-nav__link">
         
   
   
@@ -771,10 +771,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../hardware/mqtt-network/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MQTT 연결 문제
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -790,6 +817,181 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        무엇을 다루나요?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가장 흔한 증상 — "한쪽 방향만 안 됩니다"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        스위치로 직접 묶은 교실 환경은 특히 자주 발생합니다
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        해결 방법 1 — 앱에서 버튼 한 번 (권장)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        해결 방법 2 — 직접 명령 실행
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="해결 방법 2 — 직접 명령 실행">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1단계 · 관리자 PowerShell 열기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2단계 · 네트워크를 개인으로 전환
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3단계 · 방화벽 규칙 추가
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        확인하는 방법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="확인하는 방법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        브로커 PC 가 살아 있는지 확인 (더 확실한 방법)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        그래도 안 될 때
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        수업 전 점검 목록
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        다음 단계
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -802,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hardware/troubleshooting/" class="md-nav__link">
+      <a href="../troubleshooting/" class="md-nav__link">
         
   
   
@@ -894,7 +1096,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../factoblock/" class="md-nav__link ">
+            <a href="../../factoblock/" class="md-nav__link ">
               
   
   
@@ -938,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../factoblock/basic-cards/" class="md-nav__link">
+      <a href="../../factoblock/basic-cards/" class="md-nav__link">
         
   
   
@@ -966,7 +1168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../factoblock/robot-cards/" class="md-nav__link">
+      <a href="../../factoblock/robot-cards/" class="md-nav__link">
         
   
   
@@ -994,7 +1196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../factoblock/conveyor-cards/" class="md-nav__link">
+      <a href="../../factoblock/conveyor-cards/" class="md-nav__link">
         
   
   
@@ -1022,7 +1224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../factoblock/sensor-cards/" class="md-nav__link">
+      <a href="../../factoblock/sensor-cards/" class="md-nav__link">
         
   
   
@@ -1050,7 +1252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../factoblock/gpio-cards/" class="md-nav__link">
+      <a href="../../factoblock/gpio-cards/" class="md-nav__link">
         
   
   
@@ -1078,7 +1280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../factoblock/mqtt-cards/" class="md-nav__link">
+      <a href="../../factoblock/mqtt-cards/" class="md-nav__link">
         
   
   
@@ -1106,7 +1308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../factoblock/variables-conditions-loops/" class="md-nav__link">
+      <a href="../../factoblock/variables-conditions-loops/" class="md-nav__link">
         
   
   
@@ -1134,7 +1336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../factoblock/parallel/" class="md-nav__link">
+      <a href="../../factoblock/parallel/" class="md-nav__link">
         
   
   
@@ -1162,7 +1364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../factoblock/events/" class="md-nav__link">
+      <a href="../../factoblock/events/" class="md-nav__link">
         
   
   
@@ -1190,7 +1392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../factoblock/subroutines/" class="md-nav__link">
+      <a href="../../factoblock/subroutines/" class="md-nav__link">
         
   
   
@@ -1218,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../factoblock/ai-cards/" class="md-nav__link">
+      <a href="../../factoblock/ai-cards/" class="md-nav__link">
         
   
   
@@ -1246,7 +1448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../factoblock/example-first-program/" class="md-nav__link">
+      <a href="../../factoblock/example-first-program/" class="md-nav__link">
         
   
   
@@ -1274,7 +1476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../factoblock/flow-overview/" class="md-nav__link">
+      <a href="../../factoblock/flow-overview/" class="md-nav__link">
         
   
   
@@ -1302,7 +1504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../factoblock/view-st-code/" class="md-nav__link">
+      <a href="../../factoblock/view-st-code/" class="md-nav__link">
         
   
   
@@ -1370,7 +1572,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../advanced/" class="md-nav__link ">
+            <a href="../../advanced/" class="md-nav__link ">
               
   
   
@@ -1414,7 +1616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/imitation-learning/" class="md-nav__link">
+      <a href="../../advanced/imitation-learning/" class="md-nav__link">
         
   
   
@@ -1442,7 +1644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/node-canvas/" class="md-nav__link">
+      <a href="../../advanced/node-canvas/" class="md-nav__link">
         
   
   
@@ -1505,10 +1707,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        무엇을 다루나요?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        진행 순서
+        가장 흔한 증상 — "한쪽 방향만 안 됩니다"
       
     </span>
   </a>
@@ -1519,10 +1732,71 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        실행 환경 권장 사양
+        스위치로 직접 묶은 교실 환경은 특히 자주 발생합니다
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        해결 방법 1 — 앱에서 버튼 한 번 (권장)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        해결 방법 2 — 직접 명령 실행
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="해결 방법 2 — 직접 명령 실행">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1단계 · 관리자 PowerShell 열기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2단계 · 네트워크를 개인으로 전환
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3단계 · 방화벽 규칙 추가
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1530,7 +1804,35 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        강사 팁
+        확인하는 방법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="확인하는 방법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        브로커 PC 가 살아 있는지 확인 (더 확실한 방법)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        그래도 안 될 때
       
     </span>
   </a>
@@ -1538,7 +1840,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        수업 전 점검 목록
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
         다음 단계
@@ -1566,81 +1879,192 @@
 
 
 
-<h1 id="_1">시작하기<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>프리모스튜디오를 처음 사용하기 위한 준비 단계입니다. 아래 3단계를 순서대로 진행하면 메인 화면까지 도달할 수 있습니다.</p>
-<h2 id="_2">진행 순서<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<div class="grid cards">
-<ul>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg></span> <strong>1. 설치하기</strong></p>
-<hr />
-<p>macOS · Windows 별 앱 설치</p>
-<p><a href="installation/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> 설치하기로 이동</a></p>
-</li>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 16.5v-9l6 4.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg></span> <strong>2. 첫 실행</strong></p>
-<hr />
-<p>첫 실행 시 보안 알림 안내, 백엔드 자동 시작 확인</p>
-<p><a href="first-launch/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> 첫 실행으로 이동</a></p>
-</li>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6V5a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v1h-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v1H3v14h18V6Z"/></svg></span> <strong>3. 키트 선택</strong></p>
-<hr />
-<p>사용할 하드웨어 키트 선택 (또는 시뮬레이터 모드)</p>
-<p><a href="kit-selection/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> 키트 선택으로 이동</a></p>
-</li>
-</ul>
+<h1 id="mqtt">MQTT 연결이 안 될 때<a class="headerlink" href="#mqtt" title="Permanent link">&para;</a></h1>
+<p>여러 PC 를 MQTT 로 묶을 때 가장 흔한 문제와 해결 방법.</p>
+<h2 id="_1">무엇을 다루나요?<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>한 PC 에서 <strong>브로커를 시작</strong>하고 다른 PC 에서 그 주소로 <strong>접속</strong>했는데 다음 메시지가 나오는 경우입니다.</p>
+<div class="admonition failure">
+<p class="admonition-title">브로커에 연결하지 못했어요 (192.168.1.202:1883)</p>
+<p>① 주소가 맞는지 ② 그 PC 에서 브로커가 켜져 있는지 ③ 그 PC 방화벽에서 1883번 포트가 허용돼 있는지 확인해 주세요.</p>
 </div>
-<p>전체 소요 시간: 약 <strong>5~10분</strong></p>
-<h2 id="_3">실행 환경 권장 사양<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>원인의 대부분은 <strong>브로커 PC 의 Windows 방화벽</strong>입니다. 앱이나 네트워크 장비 문제가 아닙니다.</p>
+<hr />
+<h2 id="_2">가장 흔한 증상 — "한쪽 방향만 안 됩니다"<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">실제 사례 (2026-08)</p>
+<ul>
+<li>A PC 가 브로커일 때 → B 에서 접속 <strong>실패</strong></li>
+<li>B PC 가 브로커일 때 → A 에서 접속 <strong>성공</strong></li>
+</ul>
+<p>같은 앱, 같은 네트워크인데 <strong>방향에 따라 결과가 다릅니다.</strong></p>
+</div>
+<p>이건 앱 문제가 아닙니다. <strong>두 PC 의 방화벽 상태가 다른 것</strong>입니다.</p>
+<p>앱이 처음 브로커를 열 때 Windows 가 "방화벽 허용" 대화상자를 띄우는데,</p>
+<ul>
+<li>한 PC 에서는 <strong>[허용]</strong> 을 눌렀고</li>
+<li>다른 PC 에서는 <strong>[취소]</strong> 를 눌렀거나 대화상자를 놓쳤습니다</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">한 번 거부하면 다시 묻지 않습니다</p>
+<p>거부된 이후로는 <strong>조용히 차단</strong>되고 대화상자가 다시 뜨지 않습니다. 그래서 "어제는 됐는데 오늘은 안 된다", "저 PC 만 안 된다" 같은 증상으로 나타납니다.</p>
+</div>
+<hr />
+<h2 id="_3">스위치로 직접 묶은 교실 환경은 특히 자주 발생합니다<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>공유기 없이 <strong>스위치(허브)로만 PC 들을 연결</strong>한 경우, Windows 는 그 네트워크를 <strong>"식별되지 않은 네트워크"</strong> 로 보고 <strong>공용(Public)</strong> 으로 분류합니다.</p>
+<p>공용 프로필에서는 <strong>들어오는 연결이 기본적으로 모두 차단</strong>됩니다. 핑조차 응답하지 않습니다.</p>
+<div class="admonition info">
+<p class="admonition-title">왜 공용으로 잡히나요?</p>
+<p>Windows 는 인터넷 게이트웨이가 보이지 않는 네트워크를 신뢰할 수 없는 것으로 간주합니다. 교실 내부망은 실제로는 안전하지만 Windows 는 그것을 알 방법이 없습니다.</p>
+</div>
+<hr />
+<h2 id="1">해결 방법 1 — 앱에서 버튼 한 번 (권장)<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">가장 쉬운 방법</p>
+<p>브로커를 시작하면 <strong>[장비] 탭 → MQTT 영역</strong>에 방화벽 상태가 표시됩니다.</p>
 <table>
 <thead>
 <tr>
-<th>항목</th>
-<th>권장 사양</th>
-<th>비고</th>
+<th>표시</th>
+<th>의미</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>운영체제</td>
-<td>macOS 12+ / Windows 10+</td>
-<td>macOS 는 Apple Silicon · Intel 모두 지원</td>
+<td>✓ 방화벽 허용됨</td>
+<td>다른 PC 에서 접속할 수 있는 상태</td>
 </tr>
 <tr>
-<td>메모리</td>
-<td>8GB 이상</td>
-<td>AI 비전 사용 시 16GB 권장</td>
+<td>⚠ 네트워크가 "공용"</td>
+<td>들어오는 연결이 차단되는 상태</td>
 </tr>
 <tr>
-<td>디스크 여유</td>
-<td>2GB 이상</td>
-<td>설치 + 모델 캐시 포함</td>
-</tr>
-<tr>
-<td>네트워크</td>
-<td>카메라·로봇과 같은 Wi-Fi 또는 유선 LAN</td>
-<td>같은 네트워크에 있어야 자동 발견</td>
-</tr>
-<tr>
-<td>인터넷</td>
-<td>첫 다운로드와 자동 업데이트 시에만</td>
-<td>평상 사용 시 오프라인 가능</td>
+<td>⚠ 허용 규칙 없음</td>
+<td>1883 포트가 열려 있지 않은 상태</td>
 </tr>
 </tbody>
 </table>
-<h2 id="_4">강사 팁<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>차단 상태면 <strong>[🛡 방화벽 허용]</strong> 버튼이 나타납니다. 누르면 Windows 관리자 확인 창이 뜨고, <strong>[예]</strong> 를 선택하면 등록됩니다. 한 번만 하면 이후로는 유지됩니다.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">이 버튼이 실제로 하는 일</p>
 <ul>
-<li><strong>첫 사용 안내는 키트 선택 화면까지</strong> — 학생이 메인 화면으로 진입한 뒤에는 <a href="../hardware/">하드웨어 연결</a> 단계로 넘어가는 게 자연스럽습니다.</li>
-<li><strong>시뮬레이터 모드를 먼저 권장</strong> — 하드웨어 없이도 모든 기능 학습 가능. 익숙해진 후 실제 키트로 전환하면 시행착오를 크게 줄일 수 있습니다.</li>
-<li><strong>학생 PC 일괄 설치</strong> 시 다운로드 링크보다 USB 메모리에 미리 받아두는 것이 빠릅니다.</li>
+<li>MQTT 포트(기본 1883) <strong>인바운드 허용</strong> 규칙 추가</li>
+<li>핑 응답 허용 규칙 추가 (다음에 문제 생겼을 때 진단용)</li>
+<li><strong>게이트웨이가 없는 네트워크만</strong> 공용 → 개인으로 전환</li>
 </ul>
-<h2 id="_5">다음 단계<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>준비되셨다면 <strong><a href="installation/">설치하기 →</a></strong> 로 이동하세요.</p>
+<p><strong>인터넷에 연결된 Wi-Fi 는 건드리지 않습니다.</strong> 인터넷 접점을 개인으로 낮추면 네트워크 검색·공유가 열려 보안이 약해지기 때문에, 교실 스위치처럼 고립된 네트워크만 대상으로 합니다.</p>
+</div>
 <hr />
-<blockquote>
-<p>메뉴얼이나 앱 사용 중 발견한 문제·개선 의견이 있으시면 페이지 하단 <strong>📮 피드백 보내기</strong> 를 활용해 주세요.</p>
-</blockquote>
+<h2 id="2">해결 방법 2 — 직접 명령 실행<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>앱 버튼을 쓸 수 없는 상황(구버전 앱, macOS 등)이면 <strong>브로커를 실행하는 PC</strong> 에서 직접 설정합니다.</p>
+<h3 id="1-powershell">1단계 · 관리자 PowerShell 열기<a class="headerlink" href="#1-powershell" title="Permanent link">&para;</a></h3>
+<p>시작 메뉴에서 <strong>PowerShell</strong> 을 찾아 <strong>마우스 오른쪽 → 관리자 권한으로 실행</strong>.</p>
+<h3 id="2_1">2단계 · 네트워크를 개인으로 전환<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">Set-NetConnectionProfile</span> <span class="n">-InterfaceAlias</span> <span class="s2">&quot;이더넷&quot;</span> <span class="n">-NetworkCategory</span> <span class="n">Private</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">어댑터 이름 확인</p>
+<p>"이더넷" 이 아닐 수 있습니다. <code>Get-NetAdapter</code> 로 실제 이름을 확인한 뒤 바꿔 넣으세요. Wi-Fi 로 묶었다면 <code>"Wi-Fi"</code> 입니다.</p>
+</div>
+<h3 id="3">3단계 · 방화벽 규칙 추가<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">New-NetFirewallRule</span> <span class="n">-DisplayName</span> <span class="s2">&quot;PrimoStudio MQTT&quot;</span> <span class="n">-Direction</span> <span class="n">Inbound</span> <span class="n">-Protocol</span> <span class="n">TCP</span> <span class="n">-LocalPort</span> <span class="n">1883</span> <span class="n">-Action</span> <span class="n">Allow</span> <span class="n">-Profile</span> <span class="n">Any</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">New-NetFirewallRule</span> <span class="n">-DisplayName</span> <span class="s2">&quot;ICMPv4 Echo In&quot;</span> <span class="n">-Direction</span> <span class="n">Inbound</span> <span class="n">-Protocol</span> <span class="n">ICMPv4</span> <span class="n">-IcmpType</span> <span class="n">8</span> <span class="n">-Action</span> <span class="n">Allow</span> <span class="n">-Profile</span> <span class="n">Any</span>
+</code></pre></div>
+<p>두 번째 줄은 핑 응답을 허용합니다. 통신에 필수는 아니지만 <strong>다음에 문제가 생겼을 때 진단이 훨씬 쉬워집니다.</strong></p>
+<hr />
+<h2 id="_4">확인하는 방법<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><strong>접속하려는 PC(브로커가 아닌 쪽)</strong> 에서 PowerShell 을 열고:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">Test-NetConnection</span> <span class="n">-ComputerName</span> <span class="n">192</span><span class="p">.</span><span class="n">168</span><span class="p">.</span><span class="n">1</span><span class="p">.</span><span class="n">202</span> <span class="n">-Port</span> <span class="n">1883</span>
+</code></pre></div>
+<p><code>192.168.1.202</code> 자리에는 브로커 PC 의 주소를 넣습니다.</p>
+<table>
+<thead>
+<tr>
+<th>결과</th>
+<th>의미</th>
+<th>다음 할 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TcpTestSucceeded : True</code></td>
+<td>정상</td>
+<td>앱에서 그 주소로 접속하면 됩니다</td>
+</tr>
+<tr>
+<td><code>TcpTestSucceeded : False</code><br><code>PingSucceeded : True</code></td>
+<td>핑은 되는데 포트가 막힘</td>
+<td>브로커가 켜져 있는지 확인 → 방화벽 규칙 추가</td>
+</tr>
+<tr>
+<td>둘 다 <code>False</code></td>
+<td>아무것도 안 받는 상태</td>
+<td>네트워크 프로필이 <strong>공용</strong>인지 확인 (해결 방법 2)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">핑 결과가 안 보이는 건 정상입니다</p>
+<p><code>TcpTestSucceeded : True</code> 일 때는 PowerShell 이 핑 결과를 <strong>생략</strong>합니다. 실패했을 때만 원인 파악용으로 함께 보여줍니다.</p>
+</div>
+<h3 id="pc">브로커 PC 가 살아 있는지 확인 (더 확실한 방법)<a class="headerlink" href="#pc" title="Permanent link">&para;</a></h3>
+<p>방화벽은 핑을 막지만 <strong>ARP 는 막지 못합니다.</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">arp</span> <span class="n">-a</span> <span class="p">|</span> <span class="n">findstr</span> <span class="n">192</span><span class="p">.</span><span class="n">168</span><span class="p">.</span><span class="n">1</span><span class="p">.</span><span class="n">202</span>
+</code></pre></div>
+<p>MAC 주소(예: <code>24-6a-0e-11-54-2b</code>)가 보이면 그 PC 는 <strong>네트워크에 정상적으로 존재</strong>합니다. 즉 배선·스위치·IP 는 문제없고 <strong>방화벽만 막고 있다</strong>는 뜻입니다.</p>
+<hr />
+<h2 id="_5">그래도 안 될 때<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<details class="failure">
+<summary>브로커가 실행 중인지부터 확인</summary>
+<p>방화벽을 열어도 <strong>듣고 있는 프로그램이 없으면</strong> 연결되지 않습니다. 규칙은 "들어오는 것을 허용"할 뿐, 포트를 여는 건 브로커입니다.</p>
+<p>브로커 PC 에서:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">netstat</span> <span class="n">-ano</span> <span class="p">|</span> <span class="n">findstr</span> <span class="p">:</span><span class="n">1883</span>
+</code></pre></div>
+<p><code>0.0.0.0:1883</code> 과 <code>LISTENING</code> 이 보여야 정상입니다. 안 보이면 앱에서 <strong>[이 PC 에서 브로커 시작]</strong> 을 다시 눌러 주세요.</p>
+</details>
+<details class="failure">
+<summary>IP 주소가 여러 개 보일 때</summary>
+<p>브로커 시작 화면의 <strong>내 IP</strong> 드롭다운에 주소가 여러 개 뜨면, PC 에 네트워크 어댑터가 여러 개(유선 + Wi-Fi + 가상 어댑터 등) 살아 있는 것입니다.</p>
+<p><strong>다른 PC · 로봇과 같은 대역</strong>을 골라야 합니다. 예를 들어 다른 PC 가 <code>192.168.1.x</code> 라면 브로커도 <code>192.168.1.x</code> 를 선택합니다.</p>
+</details>
+<details class="failure">
+<summary>두 어댑터가 같은 대역일 때</summary>
+<p>유선과 Wi-Fi 가 <strong>둘 다 <code>192.168.1.x</code></strong> 라면 Windows 가 어느 쪽으로 응답할지 혼동합니다. "가끔 되고 가끔 안 되는" 증상의 원인입니다.</p>
+<p>확인:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">Get-NetIPAddress</span> <span class="n">-AddressFamily</span> <span class="n">IPv4</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="n">IPAddress</span> <span class="o">-notlike</span> <span class="s2">&quot;127.*&quot;</span> <span class="p">|</span> <span class="nb">Format-Table</span> <span class="n">InterfaceAlias</span><span class="p">,</span> <span class="n">IPAddress</span>
+</code></pre></div>
+<p>대역이 겹치면 교실 내부망을 <code>192.168.50.x</code> 처럼 <strong>다른 대역으로 바꾸는 것</strong>이 근본 해결입니다.</p>
+</details>
+<details class="failure">
+<summary>백신 프로그램의 자체 방화벽</summary>
+<p>V3, 알약 등 일부 보안 프로그램은 Windows 방화벽과 <strong>별도의 방화벽</strong>을 운영합니다. Windows 규칙을 추가해도 막힌다면 해당 프로그램의 방화벽 설정에서 PrimoStudio 를 허용해 주세요.</p>
+</details>
+<details class="failure">
+<summary>네트워크를 다시 연결하면 또 막힘</summary>
+<p>스위치를 다시 꽂거나 다른 네트워크에 연결하면 Windows 가 <strong>새 네트워크로 인식</strong>해 다시 공용으로 분류할 수 있습니다.</p>
+<p>이때는 프로필 명령만 다시 실행하면 됩니다. 방화벽 규칙은 <code>-Profile Any</code> 로 등록되어 프로필이 바뀌어도 계속 유효합니다.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">Set-NetConnectionProfile</span> <span class="n">-InterfaceAlias</span> <span class="s2">&quot;이더넷&quot;</span> <span class="n">-NetworkCategory</span> <span class="n">Private</span>
+</code></pre></div>
+</details>
+<hr />
+<h2 id="_6">수업 전 점검 목록<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">여러 PC 를 쓰는 수업이라면 미리 해두세요</p>
+<ol>
+<li><strong>브로커로 쓸 PC 를 미리 정합니다</strong> (보통 선생님 PC)</li>
+<li>그 PC 에서 앱을 열고 <strong>브로커를 한 번 시작</strong> → 방화벽 대화상자가 뜨면 <strong>[허용]</strong></li>
+<li>앱에 <strong>[방화벽 허용]</strong> 버튼이 보이면 눌러서 규칙을 등록해 둡니다</li>
+<li>학생 PC 한 대에서 접속을 테스트해 봅니다</li>
+<li>브로커 PC 의 IP 주소를 칠판에 적어 둡니다</li>
+</ol>
+<p>한 번 설정해 두면 이후 수업에서는 브로커 시작만 하면 됩니다.</p>
+</div>
+<hr />
+<h2 id="_7">다음 단계<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../factoblock/mqtt-cards/">MQTT 카드 사용법</a> — 여러 스테이션으로 메시지 주고받기</li>
+<li><a href="../troubleshooting/">문제 해결</a> — USB · 로봇 · 카메라 연결 문제</li>
+</ul>
 
 
 
@@ -1695,7 +2119,7 @@
       <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="이전: 사용자 메뉴얼">
+          <a href="../robot-so101/" class="md-footer__link md-footer__link--prev" aria-label="이전: SO-101 로봇팔 연결">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1705,20 +2129,20 @@
                 이전
               </span>
               <div class="md-ellipsis">
-                사용자 메뉴얼
+                SO-101 로봇팔 연결
               </div>
             </div>
           </a>
         
         
           
-          <a href="installation/" class="md-footer__link md-footer__link--next" aria-label="다음: 설치하기">
+          <a href="../troubleshooting/" class="md-footer__link md-footer__link--next" aria-label="다음: 문제 해결">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 다음
               </span>
               <div class="md-ellipsis">
-                설치하기
+                문제 해결
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1759,10 +2183,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.tracking", "toc.follow", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tabs.link", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.tracking", "toc.follow", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tabs.link", "announce.dismiss"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://tally.so/widgets/embed.js"></script>
       
