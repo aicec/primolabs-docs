@@ -598,6 +598,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -950,6 +954,62 @@
     
   
     SO-101 로봇팔 연결
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robot-emergency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    로봇 사고 대처 (강사 필독)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robot-zero-calibration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    관절 영점 재보정 (강사 필독)
   
 
     
@@ -2028,13 +2088,18 @@
 </table>
 <p><strong>위치 저장 절차</strong>:</p>
 <ol>
-<li>로봇팔을 손으로 직접 잡고 원하는 자세로 움직입니다 (Lite 6 의 free drive 모드 활용).</li>
+<li>[장비] 탭의 <strong>조그 버튼</strong>으로 로봇팔을 원하는 자세로 옮깁니다.</li>
 <li>[장비] 탭에서 해당 위치 옆의 <strong>저장</strong> 버튼 클릭</li>
 <li>위치가 영구 저장되어 다음 앱 실행 시에도 유지됨</li>
 </ol>
+<div class="admonition warning">
+<p class="admonition-title">손으로 옮기려면 관절을 풀어야 합니다</p>
+<p><strong>E-STOP 을 눌러도 관절은 손으로 움직여지지 않습니다.</strong> E-STOP 은 힘만 끊고 관절은 잠긴 채로 둡니다.</p>
+<p>손으로 옮겨야 한다면 [장비] 탭 → 로봇 운용 → <strong>[안전 자세로 빼내기]</strong> 의 [힘 빼기] 를 쓰세요. 팔이 처지므로 <strong>반드시 한 손으로 받친 상태</strong>에서 누릅니다. 자세한 내용은 <strong><a href="../robot-emergency/#갇힘">로봇 사고 대처</a></strong>.</p>
+</div>
 <div class="admonition tip">
-<p class="admonition-title">위치 교시는 학생 직접 체험이 효과적</p>
-<p>손으로 로봇팔을 움직여 위치를 저장하는 free drive 는 학생들이 가장 즐거워하는 부분입니다. 다만 저장된 위치가 <a href="#작업-범위">작업 범위</a> 안에 있는지 확인하세요 — 범위 밖이면 카드에서 호출 시 동작 안 합니다.</p>
+<p class="admonition-title">저장 전에 작업 범위를 확인하세요</p>
+<p>저장된 위치가 <a href="#작업-범위">작업 범위</a> 안에 있는지 확인하세요 — 범위 밖이면 카드에서 호출 시 동작하지 않습니다. 앱 실행 시 범위를 벗어난 저장 위치가 있으면 알림으로 미리 알려 줍니다.</p>
 </div>
 <h2 id="멀티-로봇-최대-10대">멀티 로봇 (최대 10대)<a class="headerlink" href="#멀티-로봇-최대-10대" title="Permanent link">&para;</a></h2>
 <p>여러 대의 Lite 6 를 동시에 사용할 때:</p>
@@ -2076,8 +2141,13 @@
 <p>로봇이 가동 중 장애물에 부딪혔습니다.</p>
 <ol>
 <li>로봇 주변의 장애물 (사람·물체) 제거</li>
-<li>⟳ 리셋 버튼 클릭 → 자동으로 HOME 위치로 복귀</li>
+<li><strong>[로봇 활성화]</strong> 클릭 — 움직이지 않고 모터만 켭니다</li>
+<li><strong>최저 속도로 짧게 조그</strong>해 정상인지 확인한 뒤 HOME 이동</li>
 </ol>
+<div class="admonition danger">
+<p class="admonition-title">[소프트 리셋] 을 먼저 누르지 마세요</p>
+<p>소프트 리셋은 <strong>곧바로 HOME 까지 이동</strong>합니다. 로봇이 이상한 자세에 있으면 그 첫 이동이 곧 충돌입니다. 자세한 순서는 <strong><a href="../robot-emergency/#멈춤-에러">로봇 사고 대처</a></strong>.</p>
+</div>
 </details>
 <details class="failure">
 <summary>관절 한계 초과 (코드 1)</summary>
@@ -2088,8 +2158,17 @@
 <p>물리 비상 정지 버튼이 눌린 상태입니다.</p>
 <ol>
 <li>Lite 6 본체의 비상 정지 버튼을 시계방향으로 돌려 해제</li>
-<li>앱에서 ⟳ 리셋 버튼 클릭</li>
+<li>앱에서 <strong>[로봇 활성화]</strong> 클릭 → 최저속으로 확인 후 HOME 이동</li>
 </ol>
+</details>
+<details class="failure">
+<summary>오류를 지워도 계속 다시 뜬다 (갇힘)</summary>
+<p>지금 <strong>자세 자체가 금지 조건</strong>이라, 지우는 순간 다시 납니다. 명령으로는 빠져나올 수 없습니다.</p>
+<p>[장비] 탭 → 로봇 운용 → <strong>[안전 자세로 빼내기]</strong> 로 손으로 옮겨야 합니다. 절차는 <strong><a href="../robot-emergency/#갇힘">로봇 사고 대처</a></strong>.</p>
+</details>
+<details class="failure">
+<summary>같은 명령인데 매번 다른 자세로 간다</summary>
+<p>관절 영점이 틀어졌을 수 있습니다. <strong>되돌리기 어려운 작업</strong>이므로 <strong><a href="../robot-zero-calibration/">관절 영점 재보정</a></strong> 을 먼저 읽고, 확신이 없으면 지원을 요청하세요.</p>
 </details>
 <details class="warning">
 <summary>가속도가 너무 빠르게 느껴짐</summary>
@@ -2121,6 +2200,7 @@
 <h2 id="다음-단계">다음 단계<a class="headerlink" href="#다음-단계" title="Permanent link">&para;</a></h2>
 <p>로봇팔까지 연결됐다면 모든 하드웨어 준비가 끝났습니다.</p>
 <ul>
+<li>수업 중 사고·오류 대처 → <strong><a href="../robot-emergency/">로봇 사고 대처 (강사 필독)</a></strong></li>
 <li>연결에 문제가 있으면 → <strong><a href="../troubleshooting/">문제 해결</a></strong></li>
 <li>정상 연결됐다면 → <strong><a href="../../factoblock/example-first-program/">프리모블록 첫 프로그램 만들기 →</a></strong></li>
 </ul>

@@ -12,11 +12,13 @@
         <meta name="author" content="인공지능융합교육원 주식회사">
       
       
-        <link rel="canonical" href="https://docs.primolabs.kr/manual/advanced/node-canvas/">
+        <link rel="canonical" href="https://docs.primolabs.kr/manual/hardware/robot-zero-calibration/">
       
       
-        <link rel="prev" href="../imitation-learning/">
+        <link rel="prev" href="../robot-emergency/">
       
+      
+        <link rel="next" href="../mqtt-network/">
       
       
         
@@ -27,7 +29,7 @@
     
     
       
-        <title>노드 캔버스 - 프리모스튜디오</title>
+        <title>관절 영점 재보정 (강사 필독) - 프리모스튜디오</title>
       
     
     
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#노드-캔버스" class="md-skip">
+        <a href="#관절-영점-재보정-강사-필독" class="md-skip">
           콘텐츠로 이동
         </a>
       
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              노드 캔버스
+              관절 영점 재보정 (강사 필독)
             
           </span>
         </div>
@@ -573,8 +575,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -610,17 +614,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../hardware/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -644,7 +646,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -664,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/mainboard/" class="md-nav__link">
+      <a href="../mainboard/" class="md-nav__link">
         
   
   
@@ -692,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/camera/" class="md-nav__link">
+      <a href="../camera/" class="md-nav__link">
         
   
   
@@ -720,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/robot-lite6/" class="md-nav__link">
+      <a href="../robot-lite6/" class="md-nav__link">
         
   
   
@@ -748,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/robot-so101/" class="md-nav__link">
+      <a href="../robot-so101/" class="md-nav__link">
         
   
   
@@ -776,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/robot-emergency/" class="md-nav__link">
+      <a href="../robot-emergency/" class="md-nav__link">
         
   
   
@@ -801,10 +803,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../hardware/robot-zero-calibration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    관절 영점 재보정 (강사 필독)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -820,6 +849,170 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#이-작업이-필요한-경우--그리고-아닌-경우" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        이 작업이 필요한 경우 — 그리고 아닌 경우
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#시작-전-확인-세-가지" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        시작 전 확인 세 가지
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#절차" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        절차
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="절차">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1단계--현재-관절각-확인" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1단계 · 현재 관절각 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2단계--재보정할-관절-선택" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2단계 · 재보정할 관절 선택
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3단계--정렬-후-영점-설정" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3단계 · 정렬 후 영점 설정
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#끝난-뒤--반드시-이-순서로" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        끝난 뒤 — 반드시 이 순서로
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="끝난 뒤 — 반드시 이 순서로">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#전원을-껐다-켜서-한-번-더-확인하세요" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        전원을 껐다 켜서 한 번 더 확인하세요
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#저장해-둔-위치를-다시-교시하세요" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        저장해 둔 위치를 다시 교시하세요
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#알아-두면-좋은-현상-고장-아님" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        알아 두면 좋은 현상 (고장 아님)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#이럴-땐-중단하고-지원을-요청하세요" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        이럴 땐 중단하고 지원을 요청하세요
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#다음-단계" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        다음 단계
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -832,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/mqtt-network/" class="md-nav__link">
+      <a href="../mqtt-network/" class="md-nav__link">
         
   
   
@@ -860,7 +1053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/troubleshooting/" class="md-nav__link">
+      <a href="../troubleshooting/" class="md-nav__link">
         
   
   
@@ -1393,8 +1586,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1420,15 +1611,17 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../advanced/" class="md-nav__link ">
               
   
   
@@ -1452,7 +1645,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1472,7 +1665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../imitation-learning/" class="md-nav__link">
+      <a href="../../advanced/imitation-learning/" class="md-nav__link">
         
   
   
@@ -1497,37 +1690,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    노드 캔버스
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../advanced/node-canvas/" class="md-nav__link">
         
   
   
@@ -1543,203 +1709,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="목차">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      목차
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#블록과-무엇이-다른가요" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        블록과 무엇이 다른가요?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#여는-방법" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        여는 방법
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#노드-팔레트" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        노드 팔레트
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="노드 팔레트">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#하드웨어--흐름" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        하드웨어 · 흐름
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#데이터--ai-ml" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        데이터 · AI (ML)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#만드는-순서" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        만드는 순서
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="만드는 순서">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-노드-놓기" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 노드 놓기
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-선으로-잇기" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 선으로 잇기
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-설정하기" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 설정하기
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-실행" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 실행
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#결과-보기" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        결과 보기
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#회귀--숫자를-예측하기" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        회귀 — 숫자를 예측하기
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#자주-발생하는-문제" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        자주 발생하는 문제
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#강사-팁" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        강사 팁
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#다음-단계" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        다음 단계
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1787,10 +1756,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#블록과-무엇이-다른가요" class="md-nav__link">
+  <a href="#이-작업이-필요한-경우--그리고-아닌-경우" class="md-nav__link">
     <span class="md-ellipsis">
       
-        블록과 무엇이 다른가요?
+        이 작업이 필요한 경우 — 그리고 아닌 경우
       
     </span>
   </a>
@@ -1798,10 +1767,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#여는-방법" class="md-nav__link">
+  <a href="#시작-전-확인-세-가지" class="md-nav__link">
     <span class="md-ellipsis">
       
-        여는 방법
+        시작 전 확인 세 가지
       
     </span>
   </a>
@@ -1809,22 +1778,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#노드-팔레트" class="md-nav__link">
+  <a href="#절차" class="md-nav__link">
     <span class="md-ellipsis">
       
-        노드 팔레트
+        절차
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="노드 팔레트">
+    <nav class="md-nav" aria-label="절차">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#하드웨어--흐름" class="md-nav__link">
+  <a href="#1단계--현재-관절각-확인" class="md-nav__link">
     <span class="md-ellipsis">
       
-        하드웨어 · 흐름
+        1단계 · 현재 관절각 확인
       
     </span>
   </a>
@@ -1832,10 +1801,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#데이터--ai-ml" class="md-nav__link">
+  <a href="#2단계--재보정할-관절-선택" class="md-nav__link">
     <span class="md-ellipsis">
       
-        데이터 · AI (ML)
+        2단계 · 재보정할 관절 선택
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3단계--정렬-후-영점-설정" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3단계 · 정렬 후 영점 설정
       
     </span>
   </a>
@@ -1848,22 +1828,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#만드는-순서" class="md-nav__link">
+  <a href="#끝난-뒤--반드시-이-순서로" class="md-nav__link">
     <span class="md-ellipsis">
       
-        만드는 순서
+        끝난 뒤 — 반드시 이 순서로
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="만드는 순서">
+    <nav class="md-nav" aria-label="끝난 뒤 — 반드시 이 순서로">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-노드-놓기" class="md-nav__link">
+  <a href="#전원을-껐다-켜서-한-번-더-확인하세요" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 노드 놓기
+        전원을 껐다 켜서 한 번 더 확인하세요
       
     </span>
   </a>
@@ -1871,32 +1851,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-선으로-잇기" class="md-nav__link">
+  <a href="#저장해-둔-위치를-다시-교시하세요" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 선으로 잇기
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-설정하기" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 설정하기
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-실행" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 실행
+        저장해 둔 위치를 다시 교시하세요
       
     </span>
   </a>
@@ -1909,10 +1867,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#결과-보기" class="md-nav__link">
+  <a href="#알아-두면-좋은-현상-고장-아님" class="md-nav__link">
     <span class="md-ellipsis">
       
-        결과 보기
+        알아 두면 좋은 현상 (고장 아님)
       
     </span>
   </a>
@@ -1920,32 +1878,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#회귀--숫자를-예측하기" class="md-nav__link">
+  <a href="#이럴-땐-중단하고-지원을-요청하세요" class="md-nav__link">
     <span class="md-ellipsis">
       
-        회귀 — 숫자를 예측하기
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#자주-발생하는-문제" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        자주 발생하는 문제
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#강사-팁" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        강사 팁
+        이럴 땐 중단하고 지원을 요청하세요
       
     </span>
   </a>
@@ -1981,302 +1917,183 @@
 
 
 
-<h1 id="노드-캔버스">노드 캔버스<a class="headerlink" href="#노드-캔버스" title="Permanent link">&para;</a></h1>
-<p>블록이 <strong>위에서 아래로</strong> 순서대로 실행된다면, 노드 캔버스는 <strong>선으로 이어 붙여</strong> 자유롭게 흐름을 만듭니다. 하드웨어 제어와 AI·데이터 분석을 한 화면에서 연결할 수 있습니다.</p>
-<h2 id="블록과-무엇이-다른가요">블록과 무엇이 다른가요?<a class="headerlink" href="#블록과-무엇이-다른가요" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>프리모블록</th>
-<th>노드 캔버스</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>배치</td>
-<td>위 → 아래 순서대로</td>
-<td>자유 배치, 선으로 연결</td>
-</tr>
-<tr>
-<td>실행 순서</td>
-<td>놓인 순서 그대로</td>
-<td>연결한 선을 따라</td>
-</tr>
-<tr>
-<td>데이터 전달</td>
-<td>변수 블록</td>
-<td><strong>선으로 직접 전달</strong></td>
-</tr>
-<tr>
-<td>ST 코드 변환</td>
-<td>가능</td>
-<td>AI·데이터 노드는 변환되지 않음</td>
-</tr>
-<tr>
-<td>잘 맞는 작업</td>
-<td>하드웨어 순차 제어</td>
-<td>데이터 분석 · AI + 하드웨어 결합</td>
-</tr>
-<tr>
-<td>대상</td>
-<td>초등~중등</td>
-<td>고등 이상</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition info">
-<p class="admonition-title">둘 중 하나를 고르는 것이 아닙니다</p>
-<p>PLC 의 실행 방식을 배우는 데는 블록이, 데이터가 흘러가는 과정을 배우는 데는 노드가 알맞습니다. 수업 목표에 따라 화면을 바꿔 쓰면 됩니다.</p>
-</div>
-<h2 id="여는-방법">여는 방법<a class="headerlink" href="#여는-방법" title="Permanent link">&para;</a></h2>
-<figure>
-  <img alt="노드 캔버스 화면" src="../../../assets/screens/editor-node.webp" width="860" />
-<br />
-<figcaption>블록과 달리 위→아래 순서가 아니라 <strong>선으로 이어</strong> 흐름을 만듭니다.</figcaption>
-</figure>
-<p>화면 위쪽 모드 탭에서 <strong>[노드 캔버스]</strong> 를 누릅니다.</p>
-<div class="admonition warning">
-<p class="admonition-title">학습 단계 3 (중급) 부터 열립니다</p>
-<p>입문·기초 단계에서는 탭이 회색으로 잠겨 있습니다. 화면 오른쪽 위의 학습 단계를 <strong>중급 이상</strong>으로 올리면 열립니다.</p>
-</div>
-<h2 id="노드-팔레트">노드 팔레트<a class="headerlink" href="#노드-팔레트" title="Permanent link">&para;</a></h2>
-<p>왼쪽 팔레트에서 노드를 끌어다 캔버스에 놓습니다. 노드는 크게 두 묶음입니다.</p>
-<h3 id="하드웨어--흐름">하드웨어 · 흐름<a class="headerlink" href="#하드웨어--흐름" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>묶음</th>
-<th>하는 일</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>시작 / 트리거</strong></td>
-<td>흐름의 출발점, 센서 감지로 시작</td>
-</tr>
-<tr>
-<td><strong>컨베이어</strong></td>
-<td>벨트 켜기·끄기·속도·감지 대기</td>
-</tr>
-<tr>
-<td><strong>로봇팔</strong></td>
-<td>이동, 그리퍼, 속도 설정</td>
-</tr>
-<tr>
-<td><strong>센서</strong></td>
-<td>물체 감지 확인</td>
-</tr>
-<tr>
-<td><strong>AI 비전</strong></td>
-<td>사진 찍기, 색깔 확인, AI 분류, QR·바코드</td>
-</tr>
-<tr>
-<td><strong>흐름 / 논리</strong></td>
-<td>조건 분기, 기다리기</td>
-</tr>
-<tr>
-<td><strong>변수</strong></td>
-<td>값 저장·계산</td>
-</tr>
-<tr>
-<td><strong>출력</strong></td>
-<td>화면 표시, 소리, 말하기</td>
-</tr>
-<tr>
-<td><strong>GPIO</strong></td>
-<td>입출력 핀 제어</td>
-</tr>
-<tr>
-<td><strong>MQTT 통신</strong></td>
-<td>다른 스테이션과 주고받기</td>
-</tr>
-</tbody>
-</table>
-<h3 id="데이터--ai-ml">데이터 · AI (ML)<a class="headerlink" href="#데이터--ai-ml" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>묶음</th>
-<th>하는 일</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>ML 입력</strong></td>
-<td>데이터 파일 불러오기, 카메라에서 모으기</td>
-</tr>
-<tr>
-<td><strong>ML 전처리</strong></td>
-<td>정리·변환·나누기</td>
-</tr>
-<tr>
-<td><strong>ML 모델</strong></td>
-<td>학습시키기 (분류·회귀·군집)</td>
-</tr>
-<tr>
-<td><strong>ML 평가</strong></td>
-<td>얼마나 잘 맞히는지 채점</td>
-</tr>
-<tr>
-<td><strong>ML 시각화</strong></td>
-<td>그래프로 그리기</td>
-</tr>
-<tr>
-<td><strong>ML 출력</strong></td>
-<td>결과 내보내기</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition tip">
-<p class="admonition-title">이름으로 찾으세요</p>
-<p>팔레트 위쪽 검색창에 한글로 입력하면 바로 찾을 수 있습니다. 노드가 100종 가까이 되므로 목록을 훑는 것보다 빠릅니다.</p>
-</div>
-<h2 id="만드는-순서">만드는 순서<a class="headerlink" href="#만드는-순서" title="Permanent link">&para;</a></h2>
-<h3 id="1-노드-놓기">1. 노드 놓기<a class="headerlink" href="#1-노드-놓기" title="Permanent link">&para;</a></h3>
-<p>팔레트에서 노드를 <strong>끌어다 캔버스에 놓습니다</strong>. 잡는 순간 실제 노드 모양이 따라오므로 어디에 놓이는지 바로 보입니다.</p>
-<h3 id="2-선으로-잇기">2. 선으로 잇기<a class="headerlink" href="#2-선으로-잇기" title="Permanent link">&para;</a></h3>
-<p>노드의 <strong>점(포트)</strong> 을 끌어 다음 노드에 연결합니다. 연결선에는 두 종류가 있습니다.</p>
-<ul>
-<li><strong>실행 선</strong> — "이거 끝나면 다음 거" 라는 순서</li>
-<li><strong>데이터 선</strong> — 앞 노드의 결과(표·모델·점수)를 뒤 노드로 넘김</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">아무 데나 이어지지 않습니다</p>
-<p>맞지 않는 짝(예: 표가 들어와야 하는 자리에 모델을 연결)은 앱이 막습니다. 연결이 안 되면 포트 종류가 다른 것입니다.</p>
-</div>
-<h3 id="3-설정하기">3. 설정하기<a class="headerlink" href="#3-설정하기" title="Permanent link">&para;</a></h3>
-<p>노드를 <strong>더블클릭</strong>하면 설정 창이 열립니다.</p>
-<div class="grid cards">
-<ul>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 16.88c.56 0 1 .44 1 1s-.44 1-1 1-1-.45-1-1 .44-1 1-1m0-3c2.73 0 5.06 1.66 6 4-.94 2.34-3.27 4-6 4s-5.06-1.66-6-4c.94-2.34 3.27-4 6-4m0 1.5a2.5 2.5 0 0 0 0 5 2.5 2.5 0 0 0 0-5M18 3H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5.42c-.16-.32-.3-.66-.42-1 .12-.34.26-.68.42-1H4v-4h6v2.97c.55-.86 1.23-1.6 2-2.21V13h1.15c1.16-.64 2.47-1 3.85-1 1.06 0 2.07.21 3 .59V5c0-1.1-.9-2-2-2m-8 8H4V7h6zm8 0h-6V7h6z"/></svg></span> <strong>데이터를 보고 고릅니다</strong></p>
-<hr />
-<p>앞에서 불러온 데이터의 <strong>실제 열 이름</strong>이 목록으로 나옵니다. 열 이름을 외워서 타이핑할 필요가 없습니다.</p>
-</li>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg></span> <strong>파이썬 코드 미리보기</strong></p>
-<hr />
-<p>설정 창의 <strong>[파이썬 코드]</strong> 탭에는 "지금 이 설정과 똑같은 일을 하는 파이썬 코드"가 표시됩니다. 설정을 바꾸면 코드도 바뀝니다.</p>
-</li>
-</ul>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">블록 → 코드 다리 놓기</p>
-<p>[파이썬 코드] 탭은 "지금 마우스로 고른 이 옵션이, 코드에서는 이 한 줄이다"를 보여 줍니다. 파이썬 수업으로 넘어가기 전 단계로 활용하세요.</p>
-</div>
-<h3 id="4-실행">4. 실행<a class="headerlink" href="#4-실행" title="Permanent link">&para;</a></h3>
-<p>오른쪽 위 <strong>[실행]</strong> 을 누릅니다. 실행 중인 노드가 순서대로 표시되고, 끝나면 완료된 노드 개수가 나옵니다.</p>
+<h1 id="관절-영점-재보정-강사-필독">관절 영점 재보정 (강사 필독)<a class="headerlink" href="#관절-영점-재보정-강사-필독" title="Permanent link">&para;</a></h1>
+<p>로봇이 "지금 각 관절이 몇 도인지" 를 잘못 알고 있을 때, <strong>틀어진 관절만 골라 0도 기준을 다시 잡는</strong> 작업입니다.</p>
 <div class="admonition danger">
-<p class="admonition-title">장비가 실제로 움직입니다</p>
-<p>로봇이나 컨베이어 노드가 들어 있으면 실행 전에 확인 창이 뜹니다. <strong>주변에 사람과 물건이 없는지 확인한 뒤</strong> [확인, 실행] 을 누르세요.</p>
+<p class="admonition-title">이 작업은 되돌리기 어렵습니다</p>
+<p>영점은 로봇의 모든 동작이 기준으로 삼는 값입니다. 잘못 설정하면 <strong>로봇이 엉뚱한 곳으로 가고, 정상이던 관절까지 정밀도를 잃습니다.</strong> 실제로 이 작업 중에 관절 5개가 손상된 사고가 있었습니다.</p>
+<p><strong>먼저 <a href="../robot-emergency/#상태-구분">로봇 사고 대처</a> 에서 지금 상황이 정말 영점 문제인지 확인하세요.</strong> 대부분의 "안 움직여요" 는 영점 문제가 아닙니다.</p>
 </div>
-<h2 id="결과-보기">결과 보기<a class="headerlink" href="#결과-보기" title="Permanent link">&para;</a></h2>
-<p>실행이 끝나면 노드를 클릭해 결과를 확인합니다.</p>
-<table>
-<thead>
-<tr>
-<th>보기</th>
-<th>내용</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>결과</strong></td>
-<td>표 형태의 데이터 (행·열 그대로)</td>
-</tr>
-<tr>
-<td><strong>평가지표</strong></td>
-<td>정확도, 오차 등 점수</td>
-</tr>
-<tr>
-<td><strong>파이썬 코드</strong></td>
-<td>이 설정에 해당하는 코드</td>
-</tr>
-</tbody>
-</table>
-<p>시각화 노드는 그래프를 그려 줍니다.</p>
+<h2 id="이-작업이-필요한-경우--그리고-아닌-경우">이 작업이 필요한 경우 — 그리고 아닌 경우<a class="headerlink" href="#이-작업이-필요한-경우--그리고-아닌-경우" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">영점 재보정이 맞는 경우</p>
 <ul>
-<li><strong>산점도 · 히스토그램 · 상자그림</strong> — 데이터의 분포 살펴보기</li>
-<li><strong>혼동 행렬 · ROC 곡선</strong> — 분류가 얼마나 맞았는지</li>
-<li><strong>예측 vs 실제</strong> — 회귀에서 얼마나 빗나갔는지 (대각선에 붙을수록 잘 맞힌 것)</li>
-<li><strong>특징 중요도 · 학습 커브</strong> — 무엇이 결과를 좌우했는지</li>
+<li>충돌 이후 로봇이 <strong>같은 명령에 매번 다른 물리 자세</strong>로 간다</li>
+<li><strong>정상 로봇과 설정이 똑같은데</strong> 자세만 다르다</li>
+<li>관절을 <strong>물리 영점 자세에 맞춰 놓았는데도</strong> 그 관절이 0 이 아닌 값을 읽는다</li>
 </ul>
-<h2 id="회귀--숫자를-예측하기">회귀 — 숫자를 예측하기<a class="headerlink" href="#회귀--숫자를-예측하기" title="Permanent link">&para;</a></h2>
-<p>분류가 "이건 A일까 B일까"를 맞힌다면, 회귀는 <strong>숫자 자체</strong>를 예측합니다. 온도·무게·시간처럼 눈금이 있는 값에 씁니다.</p>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">영점 재보정이 아닌 경우 (훨씬 흔합니다)</p>
+<ul>
+<li><strong>로봇이 멈췄다 / 오류가 떴다</strong> → <a href="../robot-emergency/#멈춤-에러">로봇 활성화</a></li>
+<li><strong>에러를 지워도 계속 다시 난다 (갇힘)</strong> → <a href="../robot-emergency/#갇힘">안전 자세로 빼내기</a></li>
+<li><strong>Z 값을 내려도 더 안 내려간다</strong> → <a href="../robot-lite6/#작업-범위">작업 범위 제한</a></li>
+<li><strong>아무 명령도 안 듣는다</strong> → <a href="../robot-emergency/#무반응">전원 재투입</a></li>
+<li><strong>E-STOP 후 팔이 처지거나 학생이 만져서 움직였다</strong> → <strong>영점과 무관합니다.</strong> 관절 각도는 절대 엔코더로 읽으므로 물리적으로 밀려도 로봇은 제 위치를 압니다. <a href="../robot-emergency/#팔이-움직였을-때">HOME 한 번으로 확인</a></li>
+<li><strong>화면 좌표가 이상하다</strong> → 좌표 기준 문제일 수 있습니다. 로봇을 움직이기 전에 지원을 요청하세요</li>
+</ul>
+</div>
+<h2 id="시작-전-확인-세-가지">시작 전 확인 세 가지<a class="headerlink" href="#시작-전-확인-세-가지" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>로봇이 멈춰 있어야 합니다</strong> — 실행 중에는 마법사가 열리지 않습니다</li>
+<li><strong>물리 E-STOP 버튼에 손이 닿아야 합니다</strong> — 절차 중에 <strong>두 번</strong> 누릅니다</li>
+<li><strong>한 손으로 팔을 받칠 준비</strong> — 관절을 풀면 팔이 처집니다</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">학생이 있는 상태에서 하지 마세요</p>
+<p>팔이 처지고 E-STOP 을 반복해서 누르는 작업입니다. 수업 시간이 아닐 때, 주변을 비우고 진행하세요.</p>
+</div>
+<h2 id="절차">절차<a class="headerlink" href="#절차" title="Permanent link">&para;</a></h2>
+<p><strong>[장비] 탭 → 로봇 운용 → [관절 영점 재보정]</strong></p>
+<h3 id="1단계--현재-관절각-확인">1단계 · 현재 관절각 확인<a class="headerlink" href="#1단계--현재-관절각-확인" title="Permanent link">&para;</a></h3>
+<p>앱이 현재 관절 각도를 보여 줍니다. 다만 이 값이 "틀어짐" 을 뜻하려면 <strong>지금 팔이 영점 자세에 있어야</strong> 합니다.</p>
+<div class="admonition danger">
+<p class="admonition-title">확인 전에는 빨간 숫자를 믿지 마세요</p>
+<p>HOME 자세에서 마법사를 열면 J2·J3·J5 가 전부 크게 나옵니다. 그건 <strong>HOME 자세의 정상값</strong>이지 틀어진 게 아닙니다. 그래서 앱은 <strong>"지금 팔이 영점 자세에 있습니다" 를 확인하기 전까지 틀어짐 판정을 하지 않습니다.</strong></p>
+</div>
+<p><strong>영점 자세를 맞추는 방법</strong> — 로봇 몸체에 <strong>물리 마크(홈 표시)</strong> 가 보이면 그것에 맞춥니다. 커버에 가려 안 보이는 완제품이라면 둘 중 하나를 쓰세요.</p>
 <table>
 <thead>
 <tr>
-<th>노드</th>
-<th>하는 일</th>
+<th>기준</th>
+<th>방법</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>선형 회귀</strong></td>
-<td>직선으로 관계를 찾습니다 (가장 이해하기 쉬움)</td>
+<td><strong>① 정상 로봇 대조</strong></td>
+<td>옆에 정상 로봇을 <strong>전 관절 0</strong> 자세로 두고, 대상 로봇을 <strong>같은 모양</strong>으로 맞춥니다</td>
 </tr>
 <tr>
-<td><strong>랜덤 포레스트 회귀</strong></td>
-<td>복잡한 관계도 잡아냅니다</td>
-</tr>
-<tr>
-<td><strong>회귀 평가</strong></td>
-<td>얼마나 빗나갔는지 점수로</td>
-</tr>
-<tr>
-<td><strong>예측 vs 실제</strong></td>
-<td>빗나간 정도를 그림으로</td>
+<td><strong>② 윗팔 수직</strong></td>
+<td><strong>윗팔(어깨→팔꿈치)을 수직</strong>으로 세웁니다. 그 자세가 <strong>J2 = 0도</strong> 입니다</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition tip">
-<p class="admonition-title">센서 값으로 수업하면 좋습니다</p>
-<p>컨베이어 속도와 이동 시간, 조도와 센서 값처럼 <strong>직접 측정한 데이터</strong>로 회귀를 돌리면, 남의 데이터로 하는 것보다 훨씬 잘 이해합니다.</p>
+<p>②는 눈대중으로도 ±2~3도 정확도가 나옵니다. 실제 현장에서 ①과 ②가 <strong>0.24도 안에서 일치</strong>하는 것을 확인했습니다.</p>
+<h3 id="2단계--재보정할-관절-선택">2단계 · 재보정할 관절 선택<a class="headerlink" href="#2단계--재보정할-관절-선택" title="Permanent link">&para;</a></h3>
+<p><strong>한 번에 하나만</strong> 고릅니다.</p>
+<div class="admonition danger">
+<p class="admonition-title">정상인 관절은 절대 건드리지 마세요</p>
+<p>멀쩡한 관절을 재보정하면 <strong>공장 정밀도를 잃습니다.</strong> 되돌릴 수 없습니다.</p>
+<ul>
+<li>충돌로 틀어지는 것은 보통 <strong>J1(베이스)·J2(어깨)·J3(팔꿈치)</strong> 입니다</li>
+<li><strong>손목(J4·J5·J6)은 대개 정상</strong>입니다 — 값이 이상해 보여도 손대지 마세요</li>
+<li>정상으로 보이는 관절을 고르면 앱이 경고합니다. 그 경고를 무시하지 마세요</li>
+</ul>
 </div>
-<h2 id="자주-발생하는-문제">자주 발생하는 문제<a class="headerlink" href="#자주-발생하는-문제" title="Permanent link">&para;</a></h2>
-<details class="failure">
-<summary>[노드 캔버스] 탭이 회색이에요</summary>
-<p>학습 단계가 낮습니다. 화면 오른쪽 위에서 <strong>중급(3단계) 이상</strong>으로 올리세요.</p>
-</details>
-<details class="failure">
-<summary>선이 연결되지 않아요</summary>
-<p>포트 종류가 맞지 않습니다. 표가 필요한 자리에는 표를, 모델이 필요한 자리에는 모델을 연결해야 합니다. 노드 설명을 열어 무엇이 들어가고 나오는지 확인하세요.</p>
-</details>
-<details class="failure">
-<summary>실행 버튼이 눌리지 않아요</summary>
-<p>캔버스에 노드가 하나도 없거나, 이미 실행 중입니다. 실행이 끝날 때까지 기다리세요.</p>
-</details>
-<details class="question">
-<summary>노드로 만든 흐름을 ST 코드로 바꿀 수 있나요?</summary>
-<p>하드웨어 노드는 블록과 같은 명령을 쓰지만, <strong>AI·데이터 노드는 ST 코드로 표현할 수 없습니다</strong>. PLC 코드가 필요한 수업이라면 블록 화면을 쓰세요.</p>
-</details>
-<details class="question">
-<summary>팔레트에 있어야 할 노드가 안 보여요</summary>
-<p>지금 선택한 <strong>키트에 없는 장비</strong>의 노드는 숨겨집니다. 예를 들어 로봇이 없는 키트에서는 로봇 노드가 나오지 않습니다. 자물쇠 아이콘으로 표시된 것은 학습 단계가 더 높아야 열립니다.</p>
-</details>
-<details class="question">
-<summary>캔버스를 처음부터 다시 하고 싶어요</summary>
-<p><strong>[캔버스 초기화]</strong> 를 누르면 모두 지워집니다. 되돌릴 수 없으니 필요한 결과는 먼저 저장하세요.</p>
-</details>
-<h2 id="강사-팁">강사 팁<a class="headerlink" href="#강사-팁" title="Permanent link">&para;</a></h2>
-<div class="admonition tip">
-<p class="admonition-title">블록을 먼저, 노드는 나중에</p>
-<p>노드 캔버스는 자유도가 높은 만큼 처음 보는 학생에게는 막막합니다. 블록으로 순차 실행을 충분히 익힌 뒤에 "이번엔 데이터가 흘러가는 걸 보자"로 넘어가는 순서를 권합니다.</p>
+<div class="admonition danger">
+<p class="admonition-title">손목이 '틀어져 보이는' 이유 — 이것이 사고의 핵심입니다</p>
+<p><strong>E-STOP 을 누를 때마다 손목(J4·J5·J6)은 그리퍼 무게에 끌려 몇 도씩 움직입니다.</strong> 이 절차는 E-STOP 을 여러 번 누르므로, 손목 값은 볼 때마다 달라져 있습니다.</p>
+<p>실제 사고에서 손상된 관절이 <strong>J1·J2·J4·J5·J6</strong> — <strong>손목 셋이 전부</strong> 들어갔습니다. 굴러간 손목을 "틀어졌다" 고 판단해 재보정 대상에 넣은 결과입니다.</p>
+<p><strong>충돌로 틀어지는 것은 팔(J1·J2·J3)입니다. 손목이 이상해 보이면 그건 대개 방금 굴러간 것입니다.</strong> 자세한 설명은 <a href="../robot-emergency/#팔이-움직였을-때">E-STOP 후에 팔이 움직였을 때</a>.</p>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">작게 시작해 하나씩 붙이기</p>
-<p>데이터 불러오기 → 실행 → 결과 보기까지 <strong>노드 두 개로 먼저 성공</strong>시키고, 거기에 전처리·모델·평가를 하나씩 붙이게 하세요. 처음부터 전체 그림을 그리게 하면 어디가 잘못됐는지 못 찾습니다.</p>
+<div class="admonition warning">
+<p class="admonition-title">1도 이내는 건드리지 마세요</p>
+<p>눈대중 정렬의 오차 자체가 <strong>±2~3도</strong> 입니다. 그보다 작은 값은 "틀어진 것" 과 "내가 잘못 맞춘 것" 을 구분할 수 없습니다. 고치면 개선이 아니라 도박입니다.</p>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">설정을 바꾸고 코드 변화 관찰하기</p>
-<p>같은 노드에서 옵션 하나만 바꾸고 [파이썬 코드] 탭을 다시 보게 하면, GUI 조작과 코드가 1:1로 연결된다는 감각이 생깁니다.</p>
+<h3 id="3단계--정렬-후-영점-설정">3단계 · 정렬 후 영점 설정<a class="headerlink" href="#3단계--정렬-후-영점-설정" title="Permanent link">&para;</a></h3>
+<p>순서를 하나도 건너뛰면 안 됩니다.</p>
+<ol>
+<li><strong>[J n 힘 풀기]</strong> — 그 관절만 손으로 움직일 수 있게 됩니다 (팔을 받친 뒤 누르세요)</li>
+<li><strong>손으로 물리 영점 자세에 맞춥니다</strong></li>
+<li><strong>[J n 다시 잠그기]</strong> — 정렬을 고정합니다</li>
+<li><strong>물리 E-STOP 을 눌렀다 뗍니다</strong> (첫 번째)</li>
+<li><strong>[영점 설정]</strong> 클릭</li>
+<li><strong>물리 E-STOP 을 한 번 더 눌렀다 뗍니다</strong> (두 번째) — <strong>여기서 비로소 적용됩니다</strong></li>
+<li><strong>[적용 확인]</strong> 으로 각도가 0 이 됐는지 확인합니다</li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">두 번째 E-STOP 이 진짜 적용입니다 — 여기서 사고가 났습니다</p>
+<p>5번의 결과 메시지는 <strong>"로봇이 명령을 받았다"</strong> 는 뜻일 뿐, 아직 저장된 게 아닙니다. 예전 버전은 이걸 "완료" 로 표시했고, 안 된 줄 안 사용자가 [영점 설정] 을 <strong>10번 반복</strong>하는 바람에 매번 엉뚱한 위치가 뒤늦게 적용돼 <strong>멀쩡하던 관절 3개까지 망가졌습니다.</strong></p>
+<ul>
+<li><strong>[적용 확인] 이 성공을 보여 주기 전에 [영점 설정] 을 다시 누르지 마세요</strong></li>
+<li>실패로 나오면 <strong>반복하지 말고</strong> 두 번째 E-STOP 을 확실히 눌렀다 뗐는지, 정렬이 맞는지부터 확인하세요</li>
+<li>적용이 끝나기 전에 창을 닫으면 <strong>전원을 껐다 켤 때 원래대로 돌아갑니다</strong></li>
+</ul>
+</div>
+<h2 id="끝난-뒤--반드시-이-순서로">끝난 뒤 — 반드시 이 순서로<a class="headerlink" href="#끝난-뒤--반드시-이-순서로" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>[로봇 활성화]</strong> — 방금 E-STOP 을 눌렀다 뗐기 때문에 모터가 꺼져 있습니다. 고장이 아닙니다</li>
+<li><strong>최저 속도로 짧게 조그</strong> — 관절이 생각한 방향으로 가는지 봅니다</li>
+<li><strong>그다음에</strong> HOME 이동</li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">[소프트 리셋] 을 쓰지 마세요</p>
+<p><strong>곧바로 HOME 까지 이동합니다.</strong> 영점이 잘못 박혔다면 그 첫 이동이 곧 충돌입니다.</p>
+</div>
+<h3 id="전원을-껐다-켜서-한-번-더-확인하세요">전원을 껐다 켜서 한 번 더 확인하세요<a class="headerlink" href="#전원을-껐다-켜서-한-번-더-확인하세요" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">[적용 확인] 이 0 을 보여 준 것만으로는 부족합니다</p>
+<p>설정 직후에는 새 기준으로 읽으니 당연히 0 입니다. <strong>진짜 저장됐는지는 전원을 껐다 켜 봐야</strong> 압니다.</p>
+<ol>
+<li><strong>전원선을 뽑고 10초 이상</strong> 기다린 뒤 다시 꽂습니다</li>
+<li><strong>팔을 만지지 말고</strong> 다시 각도를 읽습니다</li>
+<li>값이 그대로면 저장된 것입니다</li>
+</ol>
+<p>실측 기준: 전원을 껐다 켤 때 중력으로 생기는 자연스러운 처짐은 <strong>3~4도 수준</strong>입니다. 그보다 크게 변했다면 저장이 안 되고 <strong>영점이 되돌아간 것</strong>입니다.</p>
+</div>
+<h3 id="저장해-둔-위치를-다시-교시하세요">저장해 둔 위치를 다시 교시하세요<a class="headerlink" href="#저장해-둔-위치를-다시-교시하세요" title="Permanent link">&para;</a></h3>
+<div class="admonition danger">
+<p class="admonition-title">A · B · C 위치는 옛 영점 기준입니다</p>
+<p>재보정한 관절이 쓰이는 위치는 <strong>전부 다시 교시</strong>해야 합니다. 그냥 두면 로봇이 옛 기준으로 계산해서 엉뚱한 곳으로 갑니다.</p>
+</div>
+<h2 id="알아-두면-좋은-현상-고장-아님">알아 두면 좋은 현상 (고장 아님)<a class="headerlink" href="#알아-두면-좋은-현상-고장-아님" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>현상</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>E-STOP 때마다 손목이 조금씩 돌아감</strong></td>
+<td>힘이 풀리면 그리퍼 무게로 손목이 몇 도 회전합니다. <strong>영점이 이동한 게 아니라 물리적으로 돌아간 것</strong>이라, 대상 관절이 아니면 무시하세요</td>
+</tr>
+<tr>
+<td><strong>풀었는데 값이 그대로</strong></td>
+<td>소수점까지 똑같으면 틀어짐이 0 인 게 아니라 <strong>관절이 안 풀린 것</strong>입니다. 손으로 실제 움직여지는지 확인하고 정렬하세요</td>
+</tr>
+<tr>
+<td><strong>베이스를 크게 돌린 뒤 이상하게 회전</strong></td>
+<td>풀린 상태에서 J1 을 많이 돌리면 회전수 계산이 어긋날 수 있습니다. <strong>로봇을 재부팅</strong>하면 해소되고, 설정한 영점은 유지됩니다</td>
+</tr>
+<tr>
+<td><strong>앱 홈 자세와 제조사 도구의 초기 자세가 다름</strong></td>
+<td>서로 다른 기준입니다. <strong>둘이 다른 자세로 가는 건 정상</strong>이고, 판정 기준은 <strong>앱 동작</strong>입니다</td>
+</tr>
+</tbody>
+</table>
+<h2 id="이럴-땐-중단하고-지원을-요청하세요">이럴 땐 중단하고 지원을 요청하세요<a class="headerlink" href="#이럴-땐-중단하고-지원을-요청하세요" title="Permanent link">&para;</a></h2>
+<div class="admonition failure">
+<p class="admonition-title">진행하지 말고 문의</p>
+<ul>
+<li><strong>틀어진 관절이 어느 것인지 확신이 안 설 때</strong></li>
+<li><strong>[적용 확인] 이 두 번 이상 실패할 때</strong> — 반복하면 사고 사례 1 과 같은 경로가 됩니다</li>
+<li><strong>재보정 후에도 로봇이 엉뚱한 자세로 갈 때</strong></li>
+<li><strong>관절 3개 이상이 틀어져 보일 때</strong> — 원인이 영점이 아닐 가능성이 높습니다</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">이 마법사는 현장 검증이 진행 중입니다</p>
+<p>사고 이후 수정한 절차(적용용 두 번째 E-STOP 안내 + 결과 검증)는 <strong>v2.8.2 에 반영됐지만 아직 실기 확인 전</strong>입니다. 확신이 서지 않는 상황이라면 임의로 진행하지 말고 <strong>지원을 요청하세요.</strong></p>
 </div>
 <h2 id="다음-단계">다음 단계<a class="headerlink" href="#다음-단계" title="Permanent link">&para;</a></h2>
 <ul>
-<li>손으로 가르쳐 블록 만들기 → <strong><a href="../imitation-learning/">손으로 가르치기</a></strong></li>
-<li>블록 화면의 AI 카드 → <strong><a href="../../factoblock/ai-cards/">AI 비전 카드</a></strong></li>
-<li>흐름을 그림으로 확인하기 → <strong><a href="../../factoblock/flow-overview/">순서도로 보기</a></strong></li>
+<li>사고 상황 전반 → <strong><a href="../robot-emergency/">로봇 사고 대처</a></strong></li>
+<li>로봇 연결 · 안전 설정 → <strong><a href="../robot-lite6/">Lite 6 로봇팔 연결</a></strong></li>
 </ul>
 <hr />
 <blockquote>
@@ -2336,7 +2153,7 @@
       <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
         
           
-          <a href="../imitation-learning/" class="md-footer__link md-footer__link--prev" aria-label="이전: 손으로 가르치기">
+          <a href="../robot-emergency/" class="md-footer__link md-footer__link--prev" aria-label="이전: 로봇 사고 대처 (강사 필독)">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2346,11 +2163,27 @@
                 이전
               </span>
               <div class="md-ellipsis">
-                손으로 가르치기
+                로봇 사고 대처 (강사 필독)
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../mqtt-network/" class="md-footer__link md-footer__link--next" aria-label="다음: MQTT 연결 문제">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                MQTT 연결 문제
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
