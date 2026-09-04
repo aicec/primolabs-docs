@@ -378,3 +378,74 @@ body,
   background: rgba(255, 255, 255, 0.02);
   border-color: rgba(255, 255, 255, 0.08);
 }
+
+/* ─────────────────────────────────────────────────────────────
+   시도 순서 사다리 (robot-emergency.md) — 코드 블록 대신 단계 카드.
+   숫자 배지 + 제목 + 한 줄 힌트, 분기 조건은 단계 사이에 작은 글씨로.
+   색은 역할: 빨강 = E-STOP(무조건 먼저) · 기본 = 안전한 시도 · 호박 = 손이 가는 조치 · 초록 = 종착(지원 요청)
+   ───────────────────────────────────────────────────────────── */
+.md-typeset .ladder {
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+  border-left: 3px solid var(--md-default-fg-color--lightest);
+  margin-left: 1.05rem;
+}
+.md-typeset .ladder-step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 0 0 0.45rem -1.05rem;
+  padding: 0.55rem 0.9rem 0.55rem 0;
+  border-radius: 0.5rem;
+}
+.md-typeset .ladder-num {
+  flex: 0 0 auto;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 1;
+  color: #fff;
+  background: var(--md-primary-fg-color);
+  box-shadow: 0 0 0 3px var(--md-default-bg-color);
+}
+.md-typeset .ladder-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding-top: 0.15rem;
+  min-width: 0;
+}
+.md-typeset .ladder-body strong {
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+.md-typeset .ladder-body span {
+  font-size: 0.78rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.35;
+}
+.md-typeset .ladder-branch {
+  margin: 0.15rem 0 0.55rem 1.2rem;
+  padding-left: 0.4rem;
+  font-size: 0.78rem;
+  color: #b45309;
+  font-weight: 600;
+}
+.md-typeset .ladder-branch::before {
+  content: "↓ ";
+}
+.md-typeset .ladder-step--stop .ladder-num { background: #dc2626; }
+.md-typeset .ladder-step--alt  .ladder-num { background: #d97706; }
+.md-typeset .ladder-step--end  .ladder-num { background: #059669; }
+.md-typeset .ladder-step--end .ladder-body strong { color: #059669; }
+[data-md-color-scheme="slate"] .md-typeset .ladder-branch { color: #fbbf24; }
+[data-md-color-scheme="slate"] .md-typeset .ladder-step--end .ladder-body strong { color: #34d399; }
+@media (max-width: 30em) {
+  .md-typeset .ladder-body strong { font-size: 0.9rem; }
+}
