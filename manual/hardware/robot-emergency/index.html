@@ -2107,7 +2107,7 @@
 <tr>
 <td><strong>③ 영점 틀어짐</strong></td>
 <td>로봇이 "지금 몇 도인지" 를 잘못 알고 있는 상태</td>
-<td>움직이기는 하는데 <strong>같은 명령에 엉뚱한 자세</strong>로 감 · 바닥에 부딪힘</td>
+<td>움직이기는 하는데 <strong>같은 명령에 엉뚱한 자세</strong>로 감 · 바닥에 부딪힘 · 실물을 영점 자세로 옮겼는데 관절값이 크게 다름 · 실물은 멀쩡한데 <strong>자기 충돌</strong> 오류로 이동 거부</td>
 <td><a href="../robot-zero-calibration/">관절 영점 재보정</a> — <strong>함부로 하지 말 것</strong></td>
 </tr>
 </tbody>
@@ -2123,6 +2123,8 @@
 <li>물리 E-STOP 이 눌려 있다면 <strong>시계방향으로 돌려 해제</strong></li>
 <li>앱 <strong>[장비] 탭 → 로봇 운용 → [로봇 활성화]</strong> 클릭<ul>
 <li>이 버튼은 <strong>움직이지 않고 모터만 켭니다</strong> — 그래서 사고 직후에 가장 안전합니다</li>
+<li>결과가 항상 한 줄로 뜹니다: <strong>"활성화했어요"</strong> 또는 <strong>"이미 활성화되어 있어요"</strong>. 아무 말도 없으면 앱과 로봇 연결부터 확인하세요</li>
+<li>안 되면 <strong>로봇 문제 카드</strong>가 뜹니다 — 무엇이 문제인지 · 왜 · 다음 행동 세 가지. <strong>주황</strong>은 직접 풀 수 있는 것(E-STOP 눌림, 관절 한계, 안전 경계 밖, 엔코더 오류), <strong>빨강</strong>은 앱에서 못 고치는 것(지원 요청)</li>
 </ul>
 </li>
 <li><strong>최저 속도로 짧게 조그</strong> 해서 생각한 방향으로 가는지 확인</li>
