@@ -1856,7 +1856,7 @@
 <h2 id="무엇을-하는-단계인가요">무엇을 하는 단계인가요?<a class="headerlink" href="#무엇을-하는-단계인가요" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>(Windows 만) 보안 알림 한 번 허용</strong> — 처음 한 번만 필요</li>
-<li><strong>백엔드 자동 시작 확인</strong> — 앱 내부에서 자동 진행되며 보통 5~10초 소요</li>
+<li><strong>앱이 준비를 마칠 때까지 기다리기</strong> — 저절로 진행되며 보통 5~10초 걸립니다</li>
 <li>정상 시작되면 <strong>키트 선택 화면</strong>이 표시됩니다 (<a href="../kit-selection/">다음 페이지</a>)</li>
 </ul>
 <figure>
@@ -1956,7 +1956,7 @@
 </div>
 <h2 id="자주-발생하는-문제">자주 발생하는 문제<a class="headerlink" href="#자주-발생하는-문제" title="Permanent link">&para;</a></h2>
 <details class="failure">
-<summary>백엔드 서버 시작 실패 다이얼로그</summary>
+<summary>'백엔드 서버 시작 실패' 안내창이 떴어요</summary>
 <p>가장 흔한 첫 실행 문제입니다. 다음 메시지가 표시됩니다:</p>
 <blockquote>
 <p><strong>백엔드 서버 시작 실패</strong><br />
@@ -1984,25 +1984,25 @@
 </details>
 <details class="failure">
 <summary>키트 선택 화면이 나타나지 않음 (30초 이상 검은 화면)</summary>
-<p>이전 실행이 비정상 종료된 경우 백엔드 프로세스 (Python) 가 메모리에 남아있을 수 있습니다.</p>
+<p>앱이 지난번에 제대로 닫히지 않으면, 함께 돌던 프로그램(<code>primolabs-server</code>)이 남아 새 실행을 막습니다. 직접 끝내 주면 됩니다.</p>
 <p><strong>Windows</strong>:</p>
 <ul>
 <li><code>Ctrl+Shift+Esc</code> 로 작업 관리자 열기</li>
 <li>"세부 정보" 탭에서 <strong><code>primolabs-server.exe</code></strong> 항목을 모두 종료
-  (v2.4.0 부터 실행 파일 이름이 바뀌었습니다 — <code>python.exe</code> 로 찾으면 나오지 않습니다)</li>
+  (예전 이름인 <code>python.exe</code> 로 찾으면 나오지 않습니다)</li>
 <li>프리모스튜디오 다시 실행</li>
 </ul>
 <p><strong>macOS</strong>:</p>
 <ul>
 <li><code>Cmd+Space</code> → "활동 모니터" 검색하여 실행</li>
 <li>"CPU" 탭에서 <strong><code>primolabs-server</code></strong> 검색
-  (v2.4.0 부터 실행 파일 이름이 바뀌었습니다 — <code>python</code> 으로 찾으면 나오지 않습니다)</li>
+  (예전 이름인 <code>python</code> 으로 찾으면 나오지 않습니다)</li>
 <li>항목 선택 후 좌상단 ✕ 버튼 → "종료"</li>
 <li>프리모스튜디오 다시 실행</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">자동 정리 기능</p>
-<p>프리모스튜디오는 앱 시작 시 남아 있는 백엔드 프로세스를 자동으로 정리합니다. 그래도 위 증상이 발생하면 페이지 하단 <strong>📮 피드백 보내기</strong> 로 알려주세요.</p>
+<p>프리모스튜디오는 켤 때마다 남아 있는 것을 스스로 정리합니다. 그래도 위 증상이 생기면 페이지 하단 <strong>📮 피드백 보내기</strong> 로 알려주세요.</p>
 </div>
 </details>
 <h2 id="강사-팁">강사 팁<a class="headerlink" href="#강사-팁" title="Permanent link">&para;</a></h2>
