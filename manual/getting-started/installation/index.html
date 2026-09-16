@@ -1889,14 +1889,52 @@
 </ol>
 <h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong><code>PrimoStudio-x.y.z-setup.exe</code> 더블 클릭</strong></li>
-<li><strong>설치 마법사 따라가기</strong> — 설치 위치 변경 없이 [다음] → [설치] 진행</li>
+<li><strong><code>PrimoStudio-x.y.z-setup.exe</code> 더블 클릭</strong><ul>
+<li><strong>"관리자 권한으로 실행" 을 쓰지 마세요.</strong> 그냥 더블 클릭하면 됩니다.</li>
+</ul>
+</li>
+<li>
+<p><strong>설치 폴더 화면 — 경로를 그대로 두고 [설치]</strong> 🔴</p>
+<ul>
+<li>화면에 이런 경로가 이미 채워져 있습니다:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>C:\Users\&lt;사용자&gt;\AppData\Local\Programs\primolabs
+</code></pre></div>
+<ul>
+<li><strong>이 경로를 바꾸지 마세요.</strong> [찾아보기] 로 다른 폴더를 고를 수 있지만, 고르면 안 됩니다.</li>
 <li><strong>[설치 완료]</strong> 클릭</li>
 <li>시작 메뉴 또는 바탕화면에 <strong>"PrimoStudio"</strong> 아이콘 생성 확인. <strong><a href="../first-launch/">첫 실행</a></strong> 페이지로 이동합니다.</li>
+</ul>
+</li>
 </ol>
+<div class="admonition danger">
+<p class="admonition-title"><code>C:\Program Files\</code> 에 설치하면 안 됩니다</p>
+<p>다른 프로그램이 대부분 <code>C:\Program Files\</code> 에 설치되기 때문에 <strong>거기가 맞는 자리처럼 느껴집니다.</strong> 프리모스튜디오는 다릅니다. 그 폴더는 Windows 가 일반 권한으로 쓰지 못하게 막아 두는데, 프리모스튜디오는 실행 중에 자기 폴더에 파일을 씁니다.</p>
+<p>거기에 설치하면 이렇게 됩니다:</p>
+<table>
+<thead>
+<tr>
+<th>증상</th>
+<th>언제 나타나나</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>▶ 시작을 눌러도 카드가 한 장도 안 돌고 <code>[WinError 5] 액세스가 거부되었습니다</code> 오류</strong></td>
+<td>바로</td>
+</tr>
+<tr>
+<td><strong>자동 업데이트가 반쯤만 적용됨</strong> — 화면은 새 버전인데 내부는 옛 버전이라 카메라·로봇 명령이 조용히 안 먹음</td>
+<td>업데이트 몇 번 뒤</td>
+</tr>
+</tbody>
+</table>
+<p>설치 프로그램이 <strong>경로 변경을 막지는 않습니다.</strong> 기본값이 이미 옳으니 <strong>그냥 두고 넘어가시면 됩니다.</strong></p>
+</div>
 <div class="admonition info">
-<p class="admonition-title">관리자 권한 불필요</p>
-<p>Windows 설치 시 관리자 권한이 필요하지 않습니다. 사용자 영역 (<code>%LOCALAPPDATA%\Programs\primolabs\</code>) 에 자동 설치됩니다.</p>
+<p class="admonition-title">관리자 권한이 필요 없습니다</p>
+<p>기본 경로(사용자 영역)에 설치하면 UAC 확인 창도 뜨지 않고, 이후 자동 업데이트도 관리자 권한 없이 동작합니다. 학교 PC 에서 관리자 계정을 못 쓰는 환경도 그대로 설치됩니다.</p>
+<p>반대로 <strong>"관리자 권한으로 실행" 으로 설치 프로그램을 띄우면</strong> <code>C:\Program Files\</code> 를 고를 수 있게 되어 위 문제로 이어질 수 있습니다.</p>
 </div>
 <h2 id="자동-업데이트">자동 업데이트<a class="headerlink" href="#자동-업데이트" title="Permanent link">&para;</a></h2>
 <p>설치 후엔 새 버전이 나올 때마다 앱이 자동으로 알림을 보여줍니다 (자세한 사용법은 <a href="../first-launch/#자동-업데이트">첫 실행 → 자동 업데이트</a> 참조).</p>
@@ -1930,7 +1968,7 @@
 </table>
 <p><strong>한 번만 하면 됩니다.</strong> 설치 후 기존 설정·저장한 위치·흐름은 그대로 남고, 이후부터는 자동 업데이트가 정상 동작합니다.</p>
 <p>macOS 에서 내 설치본이 어느 쪽인지 확실히 하려면 터미널에서:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>spctl<span class="w"> </span>-a<span class="w"> </span>-vv<span class="w"> </span>-t<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>/Applications/PrimoStudio.app
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>spctl<span class="w"> </span>-a<span class="w"> </span>-vv<span class="w"> </span>-t<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>/Applications/PrimoStudio.app
 </code></pre></div>
 <p><code>accepted</code> 가 나오면 정상입니다. <code>rejected</code> 또는 <code>Unnotarized</code> 가 나오면 위 표대로 한 번 수동 설치해 주세요.</p>
 </div>
@@ -1940,15 +1978,24 @@
 <p>다운로드가 중단됐을 가능성이 높습니다. DMG 파일을 삭제하고 <a href="https://primolabs.kr">primolabs.kr</a> 에서 다시 받아주세요. 그래도 동일한 문제가 발생하면 페이지 하단 <strong>📮 피드백 보내기</strong> 로 알려주세요.</p>
 </details>
 <details class="warning">
-<summary>이전 버전이 시스템 영역에 설치되어 있어요 (Windows)</summary>
-<p>v2.3.17 이전 버전을 <strong>관리자 권한으로</strong> 설치한 적이 있다면 첫 실행 시 다음 안내가 표시됩니다:</p>
+<summary>이미 <code>C:\Program Files\</code> 에 설치했어요 (Windows)</summary>
+<p>앱이 스스로 감지해서 첫 실행 때 한 번 알려 줍니다:</p>
 <blockquote>
-<p>🔔 <strong>설치 경로 안내</strong><br />
-프리모스튜디오가 프로그램 파일 폴더에 설치되어 있어요<br />
-v2.3.17부터는 일반 폴더에만 설치됩니다. (더 빠르고 안정적이에요)<br />
-권장: 프리모스튜디오를 한 번 제거 → 사용자 권한으로 재설치</p>
+<p>⚠️ <strong>시스템 영역 설치 감지</strong><br />
+프리모스튜디오가 시스템 영역에 설치되어 있습니다.<br />
+현재 설치 경로: <code>C:\Program Files\...</code>  </p>
+<p>시스템 영역 설치본은 자동 업데이트가 부분적으로 실패할 수 있어,<br />
+시간이 지나면 일부 기능이 정상 동작하지 않을 수 있습니다.<br />
+(예: 카드 프로그램 ▶ 시작 무반응, 카메라 명령 미반응 등)</p>
 </blockquote>
-<p>권장대로 한 번 제거 후 재설치하시면 자동 업데이트가 더 안정적으로 동작합니다.</p>
+<p><strong>내 설치 위치 확인하기</strong> — 시작 메뉴에서 PrimoStudio 아이콘 우클릭 → [파일 위치 열기] → 주소창 확인. <code>Program Files</code> 가 보이면 해당됩니다.</p>
+<p><strong>고치는 법</strong>:</p>
+<ol>
+<li>설정 → 앱 → PrimoStudio → <strong>제거</strong></li>
+<li><a href="https://primolabs.kr">primolabs.kr</a> 에서 설치 파일을 받아 <strong>관리자 권한 없이</strong> 다시 실행</li>
+<li>설치 폴더 화면에서 <strong>경로를 그대로 두고</strong> [설치]</li>
+</ol>
+<p>저장하신 카드 프로그램·교시 위치·설정은 <strong>그대로 보존됩니다.</strong> 제거해도 지워지지 않는 별도 폴더에 있습니다.</p>
 </details>
 <details class="warning">
 <summary>Apple Silicon Mac 인데 Intel 버전을 받았어요</summary>
