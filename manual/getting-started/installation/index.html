@@ -601,6 +601,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#다른-위치" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        다른 위치에 설치해야 한다면 (Windows)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1772,6 +1783,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#다른-위치" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        다른 위치에 설치해야 한다면 (Windows)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1894,14 +1916,14 @@
 </ul>
 </li>
 <li>
-<p><strong>설치 폴더 화면 — 경로를 그대로 두고 [설치]</strong> 🔴</p>
+<p><strong>설치 폴더 화면 — 기본 경로 그대로 [설치]</strong></p>
 <ul>
 <li>화면에 이런 경로가 이미 채워져 있습니다:</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>C:\Users\&lt;사용자&gt;\AppData\Local\Programs\primolabs
 </code></pre></div>
 <ul>
-<li><strong>이 경로를 바꾸지 마세요.</strong> [찾아보기] 로 다른 폴더를 고를 수 있지만, 고르면 안 됩니다.</li>
+<li><strong>그대로 두고 넘어가시면 됩니다.</strong> 바꿔야 할 사정이 있다면 아래 "다른 위치에 설치해야 한다면" 을 먼저 읽어 주세요.</li>
 <li><strong>[설치 완료]</strong> 클릭</li>
 <li>시작 메뉴 또는 바탕화면에 <strong>"PrimoStudio"</strong> 아이콘 생성 확인. <strong><a href="../first-launch/">첫 실행</a></strong> 페이지로 이동합니다.</li>
 </ul>
@@ -1929,7 +1951,43 @@
 </tr>
 </tbody>
 </table>
-<p>설치 프로그램이 <strong>경로 변경을 막지는 않습니다.</strong> 기본값이 이미 옳으니 <strong>그냥 두고 넘어가시면 됩니다.</strong></p>
+<p>설치 프로그램이 <strong>경로 변경을 막지는 않습니다.</strong> 기본값이 이미 옳으니 그냥 두고 넘어가시면 됩니다.</p>
+</div>
+<h3 id="다른-위치">다른 위치에 설치해야 한다면 (Windows)<a class="headerlink" href="#다른-위치" title="Permanent link">&para;</a></h3>
+<p>학교 정책상 특정 드라이브에 깔아야 하는 경우가 있습니다. <strong>경로를 바꿔도 됩니다</strong> — 지켜야 할 조건은 하나뿐입니다.</p>
+<blockquote>
+<p><strong>로그인한 계정이 관리자 권한 없이 쓸 수 있는 폴더</strong>여야 합니다.</p>
+</blockquote>
+<p>프리모스튜디오는 자동 업데이트할 때 자기 폴더의 파일을 교체하고, 실행 중에도 자기 폴더에 파일을 씁니다. 그래서 그 폴더에 쓰지 못하면 둘 다 막힙니다.</p>
+<table>
+<thead>
+<tr>
+<th>경로</th>
+<th>가능 여부</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>C:\Users\&lt;사용자&gt;\AppData\Local\Programs\primolabs</code> (기본값)</td>
+<td>✅ 권장</td>
+</tr>
+<tr>
+<td><code>D:\PrimoStudio</code> 처럼 <strong>내가 만든 폴더</strong></td>
+<td>✅ 쓰기 권한이 있으면 가능</td>
+</tr>
+<tr>
+<td><code>C:\Program Files\</code> · <code>C:\Program Files (x86)\</code></td>
+<td>❌ 관리자 전용</td>
+</tr>
+<tr>
+<td><code>C:\Windows\</code> 및 그 하위</td>
+<td>❌ 관리자 전용</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">고른 폴더가 괜찮은지 미리 확인하는 법</p>
+<p>파일 탐색기로 그 폴더에 들어가 우클릭 → [새로 만들기] → [텍스트 문서] 를 만들어 봅니다. <strong>권한 확인 창 없이</strong> 만들어지면 괜찮습니다 (만든 파일은 지우세요).</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">관리자 권한이 필요 없습니다</p>
@@ -2009,7 +2067,7 @@
 <div class="admonition warning">
 <p class="admonition-title">일괄 설치할 때 가장 자주 나는 실수 — 설치 위치</p>
 <p>여러 대를 빠르게 돌리다 보면 <strong>설치 폴더 화면을 습관적으로 넘기다가</strong> <code>C:\Program Files\</code> 로 바꿔 놓기 쉽습니다. 한 대만 잘못돼도 그 PC 는 수업 중에 ▶ 시작이 안 됩니다.</p>
-<p><strong>일괄 설치 후 한 번에 확인하는 법</strong> — 각 PC 에서 시작 메뉴의 PrimoStudio 아이콘 우클릭 → [파일 위치 열기] → 주소창에 <code>AppData\Local\Programs\primolabs</code> 가 보이면 정상입니다.</p>
+<p><strong>일괄 설치 후 한 번에 확인하는 법</strong> — 각 PC 에서 시작 메뉴의 PrimoStudio 아이콘 우클릭 → [파일 위치 열기] → 주소창을 봅니다. <code>Program Files</code> 가 보이면 잘못된 것이고, 기본 경로(<code>AppData\Local\Programs\primolabs</code>) 또는 <a href="#다른-위치">의도적으로 지정한 폴더</a> 면 정상입니다.</p>
 <p>설치 관리자 계정으로 일괄 작업하시더라도 <strong>설치 프로그램만은 관리자 권한으로 띄우지 마세요.</strong></p>
 </div>
 <div class="admonition tip">
