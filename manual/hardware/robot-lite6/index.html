@@ -1150,7 +1150,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../factoblock/" class="md-nav__link ">
+            <a href="../../primoblock/" class="md-nav__link ">
               
   
   
@@ -1194,7 +1194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/basic-cards/" class="md-nav__link">
+      <a href="../../primoblock/basic-cards/" class="md-nav__link">
         
   
   
@@ -1222,7 +1222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/robot-cards/" class="md-nav__link">
+      <a href="../../primoblock/robot-cards/" class="md-nav__link">
         
   
   
@@ -1250,7 +1250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/conveyor-cards/" class="md-nav__link">
+      <a href="../../primoblock/conveyor-cards/" class="md-nav__link">
         
   
   
@@ -1278,7 +1278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/sensor-cards/" class="md-nav__link">
+      <a href="../../primoblock/sensor-cards/" class="md-nav__link">
         
   
   
@@ -1306,7 +1306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/gpio-cards/" class="md-nav__link">
+      <a href="../../primoblock/gpio-cards/" class="md-nav__link">
         
   
   
@@ -1334,7 +1334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/mqtt-cards/" class="md-nav__link">
+      <a href="../../primoblock/mqtt-cards/" class="md-nav__link">
         
   
   
@@ -1362,7 +1362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/variables-conditions-loops/" class="md-nav__link">
+      <a href="../../primoblock/variables-conditions-loops/" class="md-nav__link">
         
   
   
@@ -1390,7 +1390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/parallel/" class="md-nav__link">
+      <a href="../../primoblock/parallel/" class="md-nav__link">
         
   
   
@@ -1418,7 +1418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/events/" class="md-nav__link">
+      <a href="../../primoblock/events/" class="md-nav__link">
         
   
   
@@ -1446,7 +1446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/subroutines/" class="md-nav__link">
+      <a href="../../primoblock/subroutines/" class="md-nav__link">
         
   
   
@@ -1474,7 +1474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/ai-cards/" class="md-nav__link">
+      <a href="../../primoblock/ai-cards/" class="md-nav__link">
         
   
   
@@ -1502,7 +1502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/example-first-program/" class="md-nav__link">
+      <a href="../../primoblock/example-first-program/" class="md-nav__link">
         
   
   
@@ -1530,7 +1530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/flow-overview/" class="md-nav__link">
+      <a href="../../primoblock/flow-overview/" class="md-nav__link">
         
   
   
@@ -1558,7 +1558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/view-st-code/" class="md-nav__link">
+      <a href="../../primoblock/view-st-code/" class="md-nav__link">
         
   
   
@@ -1972,23 +1972,49 @@
 <tr>
 <th>항목</th>
 <th>기본값</th>
+<th>범위</th>
 <th>의미</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>충돌 감도</strong></td>
-<td>3 (1~5)</td>
+<td>3</td>
+<td>1~5</td>
 <td>1=둔감, 5=민감. 안전 우선이라면 4~5 권장</td>
 </tr>
 <tr>
-<td><strong>가속도</strong></td>
+<td><strong>TCP 속도</strong></td>
+<td>100 mm/s</td>
+<td>10~300</td>
+<td>손끝이 직선으로 움직이는 속도</td>
+</tr>
+<tr>
+<td><strong>TCP 가속도</strong></td>
 <td>500 mm/s²</td>
-<td>100~1000 범위. 학생 학습 환경은 300~500 권장</td>
+<td>100~2000</td>
+<td>학생 학습 환경은 300~500 권장</td>
+</tr>
+<tr>
+<td><strong>관절 속도</strong></td>
+<td>30 °/s</td>
+<td>5~60</td>
+<td>관절 단위 이동(HOME·ZERO 등) 속도</td>
+</tr>
+<tr>
+<td><strong>관절 가속도</strong></td>
+<td>200 °/s²</td>
+<td>50~1000</td>
+<td>관절 단위 이동의 가속도</td>
 </tr>
 </tbody>
 </table>
-<p>설정 변경 후 <strong>💾 현재 설정 저장</strong> 을 누르면 다음 실행 시에도 자동 적용됩니다.</p>
+<div class="admonition info">
+<p class="admonition-title">속도가 두 벌인 이유</p>
+<p>직교 이동(X/Y/Z 좌표로 보내기)과 관절 이동(각도로 보내기)은 단위가 달라 <strong>따로 설정합니다.</strong> 카드가 어느 쪽을 쓰는지에 따라 적용되는 값이 달라집니다.</p>
+<p>다만 <strong>HOME · 시작위치(INITIAL) · 정리위치(ZERO)</strong> 로 갈 때는 슬라이더 값과 무관하게 <strong>키트에 정해진 느린 속도</strong>가 항상 적용됩니다. 안전 위치로 이동하는 중에는 속도를 올릴 수 없습니다.</p>
+</div>
+<p>설정 변경 후 <strong>💾 현재 설정 저장</strong> 을 누르면 다음 실행 시에도 자동 적용됩니다. 슬라이더만 움직이고 저장하지 않으면 <strong>앱을 껐다 켰을 때 원래대로 돌아갑니다</strong> — 시험 삼아 바꿔 보고 되돌리기 쉽게 한 설계입니다.</p>
 <h2 id="작업-범위">⚠️ 작업 범위 (Workspace Limits) — 강사 필독<a class="headerlink" href="#작업-범위" title="Permanent link">&para;</a></h2>
 <p>작업 범위는 <strong>로봇팔이 움직일 수 있는 공간의 한계</strong>를 정의합니다. 이 범위를 벗어나는 좌표는 카드/코드에서 명령해도 실행되지 않습니다.</p>
 <h3 id="기본값-lite-6-키트">기본값 (Lite 6 키트)<a class="headerlink" href="#기본값-lite-6-키트" title="Permanent link">&para;</a></h3>
@@ -2202,7 +2228,7 @@
 <ul>
 <li>수업 중 사고·오류 대처 → <strong><a href="../robot-emergency/">로봇 사고 대처 (강사 필독)</a></strong></li>
 <li>연결에 문제가 있으면 → <strong><a href="../troubleshooting/">문제 해결</a></strong></li>
-<li>정상 연결됐다면 → <strong><a href="../../factoblock/example-first-program/">프리모블록 첫 프로그램 만들기 →</a></strong></li>
+<li>정상 연결됐다면 → <strong><a href="../../primoblock/example-first-program/">프리모블록 첫 프로그램 만들기 →</a></strong></li>
 </ul>
 <hr />
 <blockquote>

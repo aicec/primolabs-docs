@@ -18,7 +18,7 @@
         <link rel="prev" href="../mqtt-network/">
       
       
-        <link rel="next" href="../../factoblock/">
+        <link rel="next" href="../../primoblock/">
       
       
         
@@ -1034,7 +1034,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../factoblock/" class="md-nav__link ">
+            <a href="../../primoblock/" class="md-nav__link ">
               
   
   
@@ -1078,7 +1078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/basic-cards/" class="md-nav__link">
+      <a href="../../primoblock/basic-cards/" class="md-nav__link">
         
   
   
@@ -1106,7 +1106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/robot-cards/" class="md-nav__link">
+      <a href="../../primoblock/robot-cards/" class="md-nav__link">
         
   
   
@@ -1134,7 +1134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/conveyor-cards/" class="md-nav__link">
+      <a href="../../primoblock/conveyor-cards/" class="md-nav__link">
         
   
   
@@ -1162,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/sensor-cards/" class="md-nav__link">
+      <a href="../../primoblock/sensor-cards/" class="md-nav__link">
         
   
   
@@ -1190,7 +1190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/gpio-cards/" class="md-nav__link">
+      <a href="../../primoblock/gpio-cards/" class="md-nav__link">
         
   
   
@@ -1218,7 +1218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/mqtt-cards/" class="md-nav__link">
+      <a href="../../primoblock/mqtt-cards/" class="md-nav__link">
         
   
   
@@ -1246,7 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/variables-conditions-loops/" class="md-nav__link">
+      <a href="../../primoblock/variables-conditions-loops/" class="md-nav__link">
         
   
   
@@ -1274,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/parallel/" class="md-nav__link">
+      <a href="../../primoblock/parallel/" class="md-nav__link">
         
   
   
@@ -1302,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/events/" class="md-nav__link">
+      <a href="../../primoblock/events/" class="md-nav__link">
         
   
   
@@ -1330,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/subroutines/" class="md-nav__link">
+      <a href="../../primoblock/subroutines/" class="md-nav__link">
         
   
   
@@ -1358,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/ai-cards/" class="md-nav__link">
+      <a href="../../primoblock/ai-cards/" class="md-nav__link">
         
   
   
@@ -1386,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/example-first-program/" class="md-nav__link">
+      <a href="../../primoblock/example-first-program/" class="md-nav__link">
         
   
   
@@ -1414,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/flow-overview/" class="md-nav__link">
+      <a href="../../primoblock/flow-overview/" class="md-nav__link">
         
   
   
@@ -1442,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../factoblock/view-st-code/" class="md-nav__link">
+      <a href="../../primoblock/view-st-code/" class="md-nav__link">
         
   
   
@@ -1742,12 +1742,40 @@
 </table>
 </details>
 <details class="warning">
-<summary>컨베이어 또는 카메라 연결 직후 끊김</summary>
+<summary>컨베이어 또는 카메라가 연결 직후 / 사용 중에 끊김</summary>
 <p>증상: "● 연결됨" → 잠시 후 "● 미연결" 또는 "● 응답 없음"</p>
-<ul>
-<li>USB 케이블의 접촉 불량 또는 케이블 자체 문제일 가능성 높음</li>
-<li>다른 USB 케이블로 교체</li>
-</ul>
+<p><strong>연결 직후 바로 끊긴다면</strong> — USB 케이블 접촉 불량 또는 케이블 자체 문제일 가능성이 높습니다. 다른 케이블로 교체해 보세요.</p>
+<p><strong>한동안 잘 쓰다가 끊긴다면 (Windows)</strong> — USB 절전 기능이 포트를 재운 것일 수 있습니다. 실행 중 다음과 같은 메시지를 보셨다면 거의 확실합니다:</p>
+<blockquote>
+<p><code>[CONV_START] WriteFile failed (PermissionError ... 액세스가 거부되었습니다)</code></p>
+</blockquote>
+<p>한 번만 설정하면 재발하지 않습니다:</p>
+<table>
+<thead>
+<tr>
+<th>순서</th>
+<th>할 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>제어판 → 전원 옵션 → 설정 변경 → 고급 전원 관리 옵션</strong> → <code>USB 설정</code> → <code>USB 선택적 절전 설정</code> → <strong>사용 안 함</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>장치 관리자</strong> → <code>포트(COM &amp; LPT)</code> 의 해당 장치 + <code>범용 직렬 버스 컨트롤러</code> 의 <code>USB 루트 허브</code> → 속성 → <strong>전원 관리</strong> 탭 → "전원을 절약하기 위해 컴퓨터가 이 장치를 끌 수 있음" <strong>체크 해제</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>USB 를 뽑았다 다시 꽂고 [장비] 탭에서 다시 [연결]</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">v2.8.5 이하에서는 앱을 껐다 켜야 합니다</p>
+<p>현재 배포본은 포트가 죽어도 [장비] 탭이 계속 "연결됨" 으로 보입니다. 그래서 [연결 해제] → [연결] 로는 회복되지 않고 <strong>앱을 완전히 종료한 뒤 다시 실행</strong>해야 합니다. 다음 배포부터는 끊김이 자동으로 감지되어 USB 재연결만으로 회복됩니다.</p>
+</div>
 </details>
 <details class="failure">
 <summary>카메라 영상이 안 나옴</summary>
@@ -2058,7 +2086,7 @@
         
         
           
-          <a href="../../factoblock/" class="md-footer__link md-footer__link--next" aria-label="다음: 프리모블록">
+          <a href="../../primoblock/" class="md-footer__link md-footer__link--next" aria-label="다음: 프리모블록">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 다음
